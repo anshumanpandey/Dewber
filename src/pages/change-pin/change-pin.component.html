@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar color="white">
+        <ion-buttons left>
+            <button ion-button icon-only clear navPop>
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title text-center>Change Pin</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content center text-center padding>
+    <form name="changePinForm" class="changePinForm" [formGroup]="changePinForm">
+        <ion-row>
+            <ion-col>
+                <p>&nbsp;</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-input type="password" ion-text name="Enter Old Pin" class="custom-input-light" placeholder="Old PIN" formControlName="password"></ion-input>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-input type="password" ion-text name="Enter New Password" class="custom-input-light" placeholder="New PIN"
+                    formControlName="new_password"></ion-input>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-input type="password" ion-text name="Confirm Password" class="custom-input-light" placeholder="Confirm New PIN" formControlName="confirm_password"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-8 offset-2 text-center>
+                <button ion-button full round type="submit" color="primary" block (click)="changePin()">Submit</button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

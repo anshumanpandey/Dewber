@@ -1,0 +1,62 @@
+.ft-w-500 {
+    font-weight: 500;
+}
+
+.ft-normal {
+    font-weight: normal
+}
+
+.p-0 {
+    padding: 0px !important;
+}
+
+.p-lr-10 {
+    margin: 15px 60px 15px 60px  !important;
+    padding: 2px;
+}
+
+.bg-light_blue2 {
+    background: color($colors, light_blue2, base);
+}
+
+.b-r-5 {
+    border-radius: 5px !important
+}
+
+.ft-17 {
+    font-size: 17px !important;
+}
+
+.ft-13 {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.f-20 {
+    font-size: 19px;
+}
+
+.m-10 {
+    margin: 9px;
+}
+
+.dew-point-detail-header {
+    img {
+        margin: 0 !important;
+    }
+    ion-item {
+       
+            padding-left: 0 !important;
+    
+        background: color($colors, light_blue2, base);
+        .item-inner {
+            padding-left: 5px !important;
+            padding-right: 0 !important;
+            background: color($colors, light_blue3, base);
+        }
+    }
+}

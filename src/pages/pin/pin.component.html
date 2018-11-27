@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar hideBackButton="true" color="white">
+        <ion-buttons left>
+            <button ion-button navPop>
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title text-center>Enter PIN</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content center text-center padding>
+    <form name="pinForm" [formGroup]="pinForm">
+        <ion-row>
+            <ion-col>
+                <p>&nbsp;</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-input type="number" ion-text name="Enter OTP" class="custom-input-light" placeholder="Enter the OTP" formControlName="otp"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4 offset-4 text-center>
+                <button ion-button round type="submit" color="primary" block (click)="confirmPin()">Submit</button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+    <dewber-header [header]="header_data" [back]="true" [qr]="false" [search]="false"></dewber-header>
+</ion-header>
+<ion-content>
+    <ion-list *ngIf="loadTemplate">
+        <ion-row class="bg-row" text-center>
+            <ion-col col-12>
+                <p class="f-b" color="white" ion-text text-wrap>{{promotionData.businessName}}</p>
+            </ion-col>
+        </ion-row>
+        <ion-item no-lines>
+            <ion-avatar item-left>
+                <img src="./assets/img/box.png" />
+            </ion-avatar>
+            <p ion-text class="f-b" color="text_color_light_grey" text-wrap>{{promotionData.description}}</p>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-avatar item-left>
+                <img src="./assets/img/settings1.png" />
+            </ion-avatar>
+            <p class="f-b" color="text_color_light_grey" ion-text text-wrap>Spend
+                <span color="text_color_grey" ion-text text-wrap> {{spendAmount}} </span>for
+                <span color="text_color_grey" ion-text text-wrap> {{discount}}</span> {{discount_slug}}</p>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-avatar item-left>
+                <img src="./assets/img/search_business.png" />
+            </ion-avatar>
+            <p class="f-b" color="text_color_light_grey" ion-text text-wrap>Discount code is
+                <span color="text_color_grey" ion-text text-wrap> {{promotionData.discount_code}}</span>
+            </p>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-avatar item-left>
+                <img src="./assets/img/clender.png" />
+            </ion-avatar>
+            <p class="f-b" text-wrap color="text_color_light_grey" ion-text text-wrap>Valid from {{startDate}} to {{endDate}}.
+                <span ion-text text-wrap color="text_color_light_grey">Terms & Condition apply</span>
+            </p>
+        </ion-item>
+    </ion-list>
+
+    <!-- <ion-list>
+        
+    </ion-list> -->
+</ion-content>

@@ -1,0 +1,71 @@
+.border-1{
+    border: 1px solid;
+    padding:15px;
+}
+.label-font-size{
+    font-size: 20px !important;
+    font-weight: 500;
+    color: color($colors,text_color_dark_grey,base);
+    // padding: 30px;
+    margin-top: 40px;
+}
+.desc-font{
+    color: color($colors,text_color_grey,base);
+    font-size: 13px !important;
+  
+}
+.b-b-0{
+    .item-inner{
+    border-bottom: 0 !important;
+    }
+}
+.pd-15{
+    padding: 15px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.file-container {
+    height: 200px;
+    width: 200px;
+    /* margin: 30px auto 50px; */
+    background: white;
+    border-radius: 50%;
+    margin: 20px auto 50px auto;
+    overflow: hidden;
+}
+.file-uploaded {
+    height: 200px;
+    width: 200px;
+}
+.b-1{
+    border: 1px solid #c7c7c7;
+}
+.bg-primary{
+    background: color($colors,primary,base);
+}
+.m-0{
+    margin: 0 !important;
+}
+.f-normal{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+.checkin-bg{
+    background-color: color($colors,light_blue3,base);
+}
+.checkin-name{
+    font-size: 16px;
+}
+.checkin-pd{
+    padding-top: 5px !important;
+}   
+.checkin-img-container{
+    height: 190px !important;
+    width: 190px !important; 
+    margin: 0 auto !important;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}

@@ -1,0 +1,52 @@
+<ion-header>
+    <dewber-business-header></dewber-business-header>
+</ion-header>
+<ion-content padding class="user-registration">
+    <div class="register-box" class="registration-grid">
+        <form name="userForm" [formGroup]="registerForm" *ngIf="loadTemplate">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-list class="registration-elements">
+                            <ion-item class="custom-input-light">
+                                <ion-input type="text" placeholder="First Name" ion-text name="firstName" formControlName="firstname"></ion-input>
+                            </ion-item>
+                            <ion-item class="custom-input-light">
+                                <ion-input type="text" placeholder="Second Name" ion-text name="secondName" formControlName="lastname"></ion-input>
+                            </ion-item>
+                            <ion-grid no-padding>
+                                <ion-row>
+                                    <ion-col col-4>
+                                        <ion-item class="form-element-1 pl-0">
+                                            <ion-select formControlName="dialCode" style="font-size: 16px;">
+                                                <ion-option value="{{country._id}}" *ngFor="let country of countryList">{{country.dial_code}} - {{country.country_name}}</ion-option>
+                                            </ion-select>
+                                        </ion-item>
+                                    </ion-col>
+                                    <ion-col col-8>
+                                        <ion-item class="form-element-2">
+                                            <ion-input type="number" color="dark" placeholder="Phone No" ion-text name="phoneNo" formControlName="phone_no"></ion-input>
+                                        </ion-item>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+
+                            <ion-item class="custom-input-light">
+                                <ion-input type="email" placeholder="Email Id" ion-text name="email" formControlName="email"></ion-input>
+                            </ion-item>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-8 offset-2 *ngIf="!editProfile">
+                        <button ion-button round type="submit" color="light_blue2" block (click)="createAccount()">Create</button>
+                    </ion-col>
+                    <ion-col col-8 offset-2 *ngIf="editProfile">
+                        <button ion-button round type="submit" color="light_blue2" block (click)="updateAccount()">Update</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </form>
+    </div>
+</ion-content>

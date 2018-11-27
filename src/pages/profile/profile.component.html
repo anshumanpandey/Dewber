@@ -1,0 +1,55 @@
+<!-- <ion-list>
+    <ion-list-header>Ionic</ion-list-header>
+    <button ion-item (click)="close()">Learn Ionic</button>
+    <button ion-item (click)="close()">Documentation</button>
+    <button ion-item (click)="close()">Showcase</button>
+    <button ion-item (click)="close()">GitHub Repo</button>
+  </ion-list> -->
+<div >
+  <div class="profile-bg" (click)="editProfile()">
+    <div class="profile-pd">
+      <!-- <div class="profile-img-container">
+        <img src="assets/img/user.png">
+      </div> -->
+      <div *ngIf="profile_picture == ''" class="profile-img-container">
+        <img src="assets/img/user.png">
+      </div>
+      <div *ngIf="!profile_picture == ''" class="profile-img-container">
+        <img src="{{baseURL}}{{profile_picture}}">
+      </div>
+      <div class="edit-icon">
+        <ion-icon name="create" color="white"></ion-icon>
+      </div>
+    </div>
+    <p ion-text text-center class="profile-name" color="white">{{firstname}} {{lastname}}</p>
+    <p *ngIf="templateShow" ion-text text-center class="profile-referral-code" color="white">Referral Code <span class="profile-name fw-bold"> - {{profileDetails.referral_code}}</span></p>
+  </div>
+  <ion-list class="profile-list-container m-0">
+    <ion-item color="light_blue2" *ngIf="switchAccountOption" (click)="switchLogin()">
+      Switch Login
+    </ion-item>
+    <!--<ion-item class="notification-badge">
+      Notification
+      <ion-badge item-end></ion-badge>
+    </ion-item>-->
+    <ion-item (click)="notificationSetting()">
+      Notification Settings
+    </ion-item>
+    <ion-item (click)="sendFeedback()">
+      Send Feedback
+    </ion-item>
+<!--     <ion-item *ngIf="switchAccountOption">
+      <ion-toggle [(ngModel)]="isDefaultAccount" (ionChange)="changeDefault()" ></ion-toggle>
+      <ion-label>Default Business Login</ion-label>
+    </ion-item> -->
+    <!-- <ion-item (click)="editProfile()">
+      Edit Profile
+    </ion-item> -->
+    <ion-item (click)="changePin()">
+      Change PIN
+    </ion-item>
+    <ion-item (click)="logout()">
+      Logout
+    </ion-item>
+  </ion-list>
+</div>

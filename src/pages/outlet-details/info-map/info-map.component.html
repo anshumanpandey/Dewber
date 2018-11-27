@@ -1,0 +1,157 @@
+<ion-content class="infomap-content">
+    <ion-list no-lines class="mb-0">
+        <ion-item>
+            <ion-label ion-text>
+                <ion-row>
+                    <ion-col col-4>
+                        <img src="{{baseUrl}}{{outletDetails.businessInfo.categoryInfo.category_icon}}" class="infomap-icon">
+                    </ion-col>
+                    <ion-col col-8>
+                        <p>
+                            <ion-icon class="f-22" name="md-pin"></ion-icon> &nbsp;
+                            <span class="f-12"> {{outletDetails.branch_first_address}}</span>
+                        </p>
+                        <p class="t-indent-23 f-12">{{outletDetails.branch_last_address}}</p>
+                        <p class="t-indent-23 f-12">{{outletDetails.branch_city}}, {{outletDetails.branch_state}} - {{outletDetails.branch_postal_code}}</p>
+                        <p ion-text *ngIf="outletDetails.full_phone.length > 5">
+                            <ion-icon name="call"></ion-icon> {{outletDetails.full_phone}}</p>
+                    </ion-col>
+                    <div (click)="googleMap()" class="map-marker">
+                        <img src="assets/img/map-point.png" height="35px" width="40px" class="infomap-map-icon"><br><span color="text_color_grey" class="f-10" ion-text>On Map</span>
+                    </div>
+                </ion-row>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-list class="pd-l-10 m-0" no-lines>
+        <p *ngIf="branch_website_url">
+            <img item-start src="assets/img/world.png" height="15px" width="15px">
+            <span class="ft-size-12 ml-10">
+                <a href="{{outletDetails.branch_website_url}}">{{outletDetails.branch_website_url}}</a>
+            </span>
+        </p>
+        <p *ngIf="branch_email">
+            <img item-start src="assets/img/message.png" height="15px" width="15px">
+            <span class="ft-size-12 ml-10">
+                <a href="mailto:{{outletDetails.branch_email}}">{{outletDetails.branch_email}}</a>
+            </span>
+        </p>
+    </ion-list>
+
+    <p color="text_color_dark_grey" class="ft-size-20 m-0 pd-l-10" ion-text>Opening hours</p>
+    <ion-grid class="hours-container">
+        <ion-row *ngIf="!outletDetails.monday_close">
+            <ion-col col-sm-4>
+                <p color="text_color_grey" ion-text ion-start>Monday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.monday_from}}am - {{outletDetails.monday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.monday_close">
+            <ion-col col-sm-4>
+                <p color="text_color_grey" ion-text ion-start>Monday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!outletDetails.tuesday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Tuesday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.tuesday_from}}am - {{outletDetails.tuesday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.tuesday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Tuesday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!outletDetails.wednesday_close">
+            <ion-col col-sm-4>
+                <p color="text_color_grey" ion-text ion-start>Wednesday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.wednesday_from}}am - {{outletDetails.wednesday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.wednesday_close">
+            <ion-col col-sm-4>
+                <p color="text_color_grey" ion-text ion-start>Wednesday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!outletDetails.thursday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Thursday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.thursday_from}}am - {{outletDetails.thursday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.thursday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Thursday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!outletDetails.friday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Friday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.friday_from}}am - {{outletDetails.friday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.friday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Friday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!outletDetails.saturday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Saturday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.saturday_from}}am - {{outletDetails.saturday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.saturday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Saturday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="outletDetails.sunday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Sunday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text> Closed</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!outletDetails.sunday_close">
+            <ion-col col-4>
+                <p color="text_color_grey" ion-text ion-start>Sunday</p>
+            </ion-col>
+            <ion-col col-8>
+                <p color="text_color_grey" ion-text>{{outletDetails.sunday_from}}am - {{outletDetails.sunday_to}}pm</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

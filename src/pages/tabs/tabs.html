@@ -1,0 +1,6 @@
+<ion-tabs tabsHighlight="true" [selectedIndex]="activeTab">
+  <ion-tab [root]="nearBy" tabTitle="NearBy" tabIcon="ios-send" (ionSelect)="tabChanged(0)"></ion-tab>
+  <ion-tab [root]="regularsTabs" tabTitle="Regular" tabIcon="checkmark" (ionSelect)="tabChanged(1)"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Promotion" tabIcon="star" [tabBadge]="promotion_badge" (ionSelect)="tabChanged(2)"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="My Loyalty" tabIcon="heart" (ionSelect)="tabChanged(3)"></ion-tab>
+</ion-tabs>

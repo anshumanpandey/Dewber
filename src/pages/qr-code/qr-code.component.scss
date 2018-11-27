@@ -1,0 +1,18 @@
+.qr-content{
+    display:block;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 50px;
+}
+.qr-text{
+    padding: 0px 50px 0px 50px !important;
+}
+
+.qr-scanner-container{
+ion-spinner * {
+    width: 75px !important;
+    height: 75px !important;
+  
+  }
+}

@@ -1,0 +1,26 @@
+// .promotions {
+//     .promotions-header {
+//         font-weight: 600;
+//         font-size: 18px;
+//         color: color($colors, primary, base);
+//         padding-left: 0;
+//         border-bottom: 1px solid #dedede;
+//     }
+//     .mt-20{
+//         margin-top: 10px;
+//     }
+//     ion-list {
+//         margin: 10px 0 !important;
+//     }
+//     .item-block {
+//         padding-left: 0px;
+//     }
+// }
+.promotion-content{
+    h6{
+        margin: 0 !important;
+     }
+     ion-row {
+        border-bottom: 1px solid #cfcfcf;
+     }
+}

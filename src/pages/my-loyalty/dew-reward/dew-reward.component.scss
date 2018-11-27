@@ -1,0 +1,41 @@
+.dew-reward-header {
+  margin: 0px 30px 15px 30px !important;
+  p {
+    font-size: 16px;
+  }
+}
+
+.dew-reward-searchbar-container {
+  padding: 0 40px 10px 40px;
+}
+
+.grid-container {
+  p {
+    margin: 7px 0 7px 0px;
+    color: color($colors, text_color_grey, base);
+  }
+  .col-1-container {
+    img {
+      height: 30px;
+      width: 30px;
+    }
+    p {
+      font-size: 9px;
+      margin: 6px 0 0 0;
+    }
+  }
+  .h-30 {
+    height: 30px;
+  }
+  .col-2-container {
+    background: color($colors, light_blue3, base);
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+.f-r-14 {
+  font-weight: bold !important;
+  font-size: 14px !important;
+}

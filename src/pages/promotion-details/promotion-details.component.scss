@@ -1,0 +1,26 @@
+.business-detail-icon{
+    height: 40px;
+    width: 40px;
+}
+.f-b{
+    font-weight: bold;
+}
+.bg-row{
+    background: color($colors,light_blue2,base);
+}
+.f-white{
+    color: color($colors,white,base);
+}
+
+.promotion-detail-container{
+    padding: 0;
+    .bg-row{
+        background: color($colors,light_blue2,base);
+        ion-col{
+            p{
+                margin: 9px 0 0 0;
+                height: 25px;
+            }
+        }
+    }
+}

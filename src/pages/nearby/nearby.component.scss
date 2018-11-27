@@ -1,0 +1,81 @@
+.toolbar-title-md {
+    color: color($colors, primary, base) !important;
+}
+
+.pull-left {
+    float: left;
+    padding: 10px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.business-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.distance-text {
+    padding-top: 5px;
+    color: color($colors, text_color_grey, base);
+    font-size: 12px !important;
+    font-weight: 400 !important;
+}
+
+.f-s-12 {
+    font-size: 12px;
+}
+
+.f-w-500 {
+    font-weight: 500 !important;
+}
+
+.ft-normal {
+    text-transform: none;
+}
+
+.h-25 {
+    height: 25px !important;
+}
+
+.nearby-content {
+    .f-s-12-f-w-500 {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+    }
+    .f-s-11-f-w-500 {
+        font-size: 11px !important;
+        font-weight: 500 !important;
+    }
+    h2 {
+        color: color($colors, text_color_grey, base);
+    }
+    .busineess-icon {
+        background-color: color($colors, light_blue2, base);
+    }
+}
+
+.nearby-search {
+    border: 2px solid color($colors, light_blue2, base);
+    border-radius: 4px;
+    margin: 16px;
+    transition: all 3s ease-in;
+    ion-col {
+        ion-icon {
+            font-size: 3.2rem !important;
+            font-weight: 500 !important;
+        }
+        ion-input {
+            margin: 0 !important;
+            margin: 8px 8px;
+        }
+    }
+    .search-container {
+        padding: 5px 0 0 10px !important;
+    }
+}
+
+.text-indent-10 {
+    text-indent: 10px;
+}

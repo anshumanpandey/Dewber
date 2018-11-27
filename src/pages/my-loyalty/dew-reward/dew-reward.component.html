@@ -1,0 +1,30 @@
+<ion-content no-padding>
+    <div class="dew-reward-header">
+            <p class="f-16 f-b m-5" color="text_color_grey" ion-text text-center>Business Specific Dew Rewards</p>
+        </div>
+        <ion-row class="dew-reward-search" [formGroup]="searchControl">
+            <ion-col col-10 no-padding>
+                <ion-input formControlName="search" name="search" placeholder="Search Business Name"></ion-input>
+            </ion-col>
+            <ion-col class="search-container" col-2>
+                <ion-icon color="light_blue2" name="search"></ion-icon>
+            </ion-col>
+        </ion-row>
+    <div>
+        <ion-grid class="grid-container" *ngFor="let dewReward of myOutletDetails">
+            <p class="pl-5 f-b" (click)="getDewRewardDetails(dewReward)" *ngIf="dewReward.show_campaigns">{{dewReward.business_name}}</p>
+            <ion-row *ngIf="dewReward.show_campaigns">
+                <ion-col *ngFor="let dewRewardsCampaing of dewReward.dewRewardsCampaings" col-4 (click)="getDewRewardDetails(dewReward)">
+                    <ion-row text-center *ngIf="dewRewardsCampaing.stampCount > 0">
+                        <ion-col class="col-1-container bg-secondary" col-5>
+                            <img src="{{baseUrl}}{{dewRewardsCampaing.campaignIconInfo.business_icon}}">
+                        </ion-col>
+                        <ion-col class="col-2-container" color="light_blue3" col-5>
+                            <p class="f-b f-r-14">{{dewRewardsCampaing.stampCount}}/{{dewRewardsCampaing.target}}</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

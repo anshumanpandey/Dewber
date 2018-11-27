@@ -1,0 +1,109 @@
+.toolbar-background {
+    border: 0 !important;
+}
+
+.f-26 {
+    font-size: 26px !important;
+}
+
+.register-header {
+    background: #2b60ab;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #2b60ab 0%, #40baff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #2b60ab 0%, #40baff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #2b60ab 0%, #40baff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b60ab', endColorstr='#40baff',GradientType=0 ); /* IE6-9 */
+    background-image: linear-gradient( to right, #2b60ab, #58a1f3);
+}
+.register-profile-edit {
+    position: absolute;
+    z-index: 1000;
+    margin: -70px 0 0 0;
+    right: 23px;
+    font-size: 20px;
+}
+.register-content,
+.login-box {
+    .file-container {
+        height: 100px;
+        width: 100px;
+        /* margin: 30px auto 50px; */
+        background: white;
+        border-radius: 50%;
+        margin: 20px auto 50px auto;
+        overflow: hidden;
+    }
+    .file-uploaded {
+        height: 100px;
+        width: 100px;
+    }
+    .file-img-padding {
+        //margin: 30px;
+        background: color($colors, primary, base);
+        border-radius: 50%;
+    }
+    .registration-grid {
+        margin: -35px auto;
+        width: 90%;
+        background: white;
+        border-radius: 6px;
+        padding: 10px 20px;
+    }
+    .item-inner {
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+    .registration-elements {
+        .form-element {
+            background: transparent;
+            border: 1px solid color($colors, light, base);
+            border-radius: 30px;
+            margin: 10px 0px;
+            ion-label {
+                color: color($colors, light, base);
+            }
+            ion-select {
+                width: 100%;
+                padding-left: 8px;
+                max-width: 100%;
+            }
+        }
+        ion-select {
+            max-width: 100% !important;
+            padding-left: 5px;
+        }
+        .form-element-1 {
+            border: 1px solid #cfcfcf;
+            border-radius: 30px 0px 0 30px;
+            border-right: 0;
+            background: transparent;
+        }
+        .form-element-2 {
+            border: 1px solid #cfcfcf;
+            border-radius: 0px 30px 30px 0px;
+        }
+        .item-input.item-input-has-focus:last-child,
+        .item-input.input-has-focus:last-child {
+            border-bottom-color: #cfcfcf;
+            box-shadow: none;
+        }
+        .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+            border-bottom-color: #cfcfcf !important;
+            box-shadow: none !important;
+        }
+    }
+    .header::after {
+        background-image: none !important;
+    }
+    .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+        border-bottom: 1px solid #cfcfcf!important;
+        box-shadow: none !important;
+    }
+}
+
+.f-20 {
+    font-size: 20px !important;
+}

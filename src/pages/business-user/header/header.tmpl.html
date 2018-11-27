@@ -1,0 +1,31 @@
+<ion-navbar>
+    <ion-buttons left>
+        <button ion-button *ngIf="back_button" icon-only clear navPop>
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+
+    </ion-buttons>
+    <ion-buttons left *ngIf="loadIcon" (click)="editProfile()">
+        <div class="header-profile-img-container" *ngIf="profile_picture != ''">
+            <img src="{{baseURL}}{{profile_picture}}">
+        </div>
+        <div class="header-profile-img-container" *ngIf="profile_picture == ''">
+            <img src="./assets/img/user.png">
+        </div>
+    </ion-buttons>
+    <ion-title text-center ion-text class="toolbar-title-header">{{user_full_name}}<span ion-text color="text_color_grey" class="f-10">({{branchName}})</span></ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only clear (click)="pointsDetails()">
+            <div right class="points-container">
+                <span class="point">{{dew_points | numeralPipe }}</span>
+                <br>
+                <span class="point-text">Points</span>
+            </div>
+            <img class="green-badge" *ngIf="toggleBadge" src="assets/img/notification.png" >
+        </button>
+
+        <button ion-button icon-only clear (click)="profile()">
+            <ion-icon color="primary" class="header-f-20" name="md-settings"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>

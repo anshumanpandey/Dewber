@@ -1,0 +1,54 @@
+.popover-content {
+    width: 90% !important;
+    border-radius: 10px !important; // position: inherit !important;
+    .item-inner {
+        border-bottom: 0 !important;
+    }
+}
+
+.img-user {
+    border-radius: 3px !important;
+}
+
+.f-20 {
+    font-size: 20px !important;
+}
+
+.title-content {
+    font-size: 15px;
+    color: black;
+}
+
+.h-44 {
+    height: 44px !important;
+}
+
+.pointsPopOver .popover-content {
+    top: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    left: 0 !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    max-height: 100% !important;
+}
+
+.category-icon-bg {
+    background: color($colors, light_blue2, base);
+    border-radius: 50%;
+}
+
+ion-scroll[scrollX] {
+    white-space: nowrap;
+    height: 100px;
+    .scroll-item {
+        display: inline-block;
+        width: 33%;
+    }
+}
+
+.item-border-0 {
+    .item-inner {
+        border-bottom: 0 !important;
+    }
+}

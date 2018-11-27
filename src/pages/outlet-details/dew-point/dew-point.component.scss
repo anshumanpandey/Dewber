@@ -1,0 +1,108 @@
+// .dew-point-header {
+//     font-weight: bold;
+//     font-size: 14px;
+//     color: #58595b;
+//     padding-left: 0;
+//     border-bottom: 1px solid #dedede;
+//     height: 30px;
+//     margin: 0 !important;
+//     text-transform: capitalize;
+//     p{
+//         font-size: 20px;
+//         margin: 3px;
+//     }
+// }
+.ft-bold {
+    font-weight: bold;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.f-20 {
+    font-size: 20px !important;
+}
+
+.f-1 {
+    font-size: 1.4rem !important;
+}
+
+.t-t-normal {
+    text-transform: capitalize;
+}
+
+.pr-10 {
+    padding-right: 10px !important;
+}
+
+.btn-redeem {
+    width: 80px;
+    height: 30px !important;
+    font-size: 15px !important;
+    font-weight: normal;
+}
+
+.details-icon-bg {
+    background: color($colors, light_blue2, base);
+    border: 1px solid color($colors, light_blue2, base);
+}
+
+.txt-bold {
+    font-weight: bold !important;
+}
+
+.pt-5 {
+    padding-top: 5px;
+}
+
+.pt-7 {
+    padding-top: 7px;
+}
+
+.dew-point-header {
+    padding: 5px;
+    img {
+        margin: 0 !important;
+    }
+    ion-item {
+        background: color($colors, light_blue2, base);
+        .item-inner {
+            padding-left: 5px !important;
+            padding-right: 0 !important;
+            background: color($colors, light_blue3, base);
+        }
+    }
+}
+
+.dew-points {
+    .title-text {
+        margin: 0 !important;
+        padding-bottom: 5px;
+        font-weight: 500;
+    } // .item-bg {
+    //     .item-inner {
+    //         padding-right: 0px !important;
+    //         ion-label {
+    //             margin: 0;
+    //         }
+    //     }
+    // }
+    // .points-grid {
+    //     h2 {
+    //         padding: 10px 0 5px 10px;
+    //     }
+    //     p {
+    //         padding: 0 0 5px 10px;
+    //         color: color($colors,primary,base);
+    //     }
+    // }
+    // .stamp-count-container {
+    //     color: white;
+    //     padding-top: 5px !important;
+    //     font-weight: bold;
+    //     .stamp-count {
+    //         font-size: 18px;
+    //     }
+    // }
+}

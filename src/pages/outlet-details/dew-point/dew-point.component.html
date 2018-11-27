@@ -1,0 +1,46 @@
+<ion-header>
+</ion-header>
+<ion-content class="dew-points">
+    <p color="text_color_grey" class="title-text" ion-text text-center>Redeem Business Dew Points</p>
+    <!-- <ion-item-group padding> -->
+        <!-- <ion-item no-padding *ngFor="let dewPoint of dewPointList" class="item-bg mb-5">
+
+            <ion-grid no-padding class="points-grid">
+                <ion-row align-items-center>
+                    <ion-col text-center col-2 no-padding class="details-icon-bg p-5">
+                        <img src="{{baseUrl}}{{dewPoint.campaignIconInfo.business_icon}}" class="pt-7">
+                    </ion-col>
+                    <ion-col col-5 padding class="p-5">
+                        <h2 ion-text text-wrap class="txt-bold pt-3" color="primary">{{dewPoint.name}}</h2>
+                        <p ion-text text-wrap>{{dewPoint.description}}</p>
+                    </ion-col>
+                    <ion-col col-2 padding text-center class="pt-5">
+                        <p ion-text color="text_color_dark_grey" text-center class="ft-bold f-17 m-0" item-end>{{dewPoint.dew_points}}</p>
+                        <span class="ft-normal f-12">Points</span>
+                    </ion-col>
+                    <ion-col col-3 padding class="pt-5">
+                        <button ion-button item-end class="t-t-normal btn-redeem" color="light_blue2" (click)="confirmRedeem(dewPoint._id)">Redeem</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item> -->
+        <ion-list *ngFor="let dewPoint of dewPointList" class="dew-point-header">
+            <ion-item class="item-bg" no-margin no-padding>
+                <!-- <div > -->
+                    <img src="{{baseUrl}}{{dewPoint.campaignIconInfo.business_icon}}" item-start no-margin>
+                <!-- </div> -->
+                <p color="dark" ion-text color="text_color_grey" class="ft-w-500 ft-17">{{dewPoint.name}}
+                    <br>
+                    <span class="ft-normal ft-13" ion-text text-wrap>{{dewPoint.description}}</span>
+                </p>
+                <p color="dark" ion-text color="text_color_grey" text-center class="ft-bold" item-end>{{dewPoint.dew_points}}
+                    <br>
+                    <span class="ft-normal f-10">Points</span>
+                </p>
+                <button ion-button item-end color="light_blue2" (click)="confirmRedeem(dewPoint._id)">Redeem</button>
+                <!---->
+                <!-- <button ion-button item-end (click)="confirmRedeem()">Redeem</button> -->
+            </ion-item>
+        </ion-list>
+    <!-- </ion-item-group> -->
+</ion-content>

@@ -1,0 +1,15 @@
+.outlet-details-tabs .tabbar{
+    background: color($colors, light_blue2, base);
+    .tab-button {
+        color: white;
+        min-height: 2.6rem;
+        margin: 10px 0; 
+    }
+    .tab-button:not(:last-child) {
+        border-right: 1px solid white;
+    }
+    .tab-button:nth-child(3) {
+        border-right: 0px solid white !important;
+    }
+
+}

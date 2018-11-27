@@ -1,0 +1,88 @@
+<ion-content class="register-content">
+    <ion-row class="logo-row register-header">
+        <ion-col col-12>
+            <ion-row text-center>
+                <ion-col col-2>
+                    <button ion-button color="white" icon-only clear navPop>
+                        <ion-icon name="arrow-round-back"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col col-8>
+                    <p class="f-26 m-0 pt-5" ion-text color="white">{{header}}</p>
+                </ion-col>
+            </ion-row>
+            <!-- <ion-row>
+                <ion-col col-6 offset-3>
+                    <div class="file-container" (click)="presentActionSheet()">
+                        <img src="{{ pathForImage(lastImage) }}" *ngIf="lastImage" class="file-uploaded">
+                        <div class="file-img-padding">
+                            <img src="assets/img/test.svg" *ngIf="!lastImage" class="file-img-background">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row> -->
+            <ion-row>
+                <ion-col col-6 offset-3>
+                    <div class="file-container" (click)="presentActionSheet()" *ngIf="loadTemplate">
+                        <img src="{{ pathForImage(lastImage) }}" *ngIf="lastImage" class="file-uploaded">
+                        <div>
+                            <span *ngIf="!lastImage">
+                                <img src="{{baseURL}}{{profileDetails.profile_picture}}" *ngIf="!profileDetails.profile_picture == ''" class="file-uploaded">
+                                <div class="file-img-padding" *ngIf="profileDetails.profile_picture == ''">
+                                    <img src="assets/img/user.png" *ngIf="!lastImage">
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <ion-icon name="create" color="white" class="register-profile-edit" (click)="presentActionSheet()"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+
+    </ion-row>
+    <div class="register-box" class="registration-grid" *ngIf="loadTemplate">
+        <form name="userForm" [formGroup]="editProfileForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list class="registration-elements mb-0">
+                        <ion-item class="form-element">
+                            <ion-input type="text" color="dark" placeholder="First Name" ion-text name="firstName" formControlName="firstname"></ion-input>
+                        </ion-item>
+                        <ion-item class="form-element">
+                            <ion-input type="text" color="dark" placeholder="Second Name" ion-text name="lastName" formControlName="lastname"></ion-input>
+                        </ion-item>
+                        <ion-grid no-padding>
+                            <ion-row>
+                                <ion-col col-4>
+                                    <ion-item class="form-element-1 pl-0">
+                                        <ion-select formControlName="dialCode" placeholder="+44" style="font-size: 16px;" disabled>
+                                            <ion-option value="{{country._id}}" *ngFor="let country of countryList">{{country.dial_code}}</ion-option>
+                                        </ion-select>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-8>
+                                    <ion-item class="form-element-2">
+                                        <ion-input type="number" color="dark" placeholder="Phone No" ion-text name="phoneNo" formControlName="phone_no" disabled></ion-input>
+                                    </ion-item>
+                                </ion-col>
+                                <span class="f-10 width-100" color="text_color_grey" ion-text text-center>Request business admin to update number</span>
+                            </ion-row>
+                        </ion-grid>
+
+                        <ion-item class="form-element">
+                            <ion-input type="text" placeholder="Email ID" ion-text name="emailId" formControlName="email"></ion-input>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-8 offset-2>
+                    <button ion-button round type="submit" color="primary" block (click)="uploadData()">{{profile_button_text}}</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+
+    </div>
+</ion-content>

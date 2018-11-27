@@ -1,0 +1,10 @@
+<ion-header *ngIf="showHeader">
+    <dewber-header [header]="header_data" [search]="false" [branch]="branchId" #headerComp></dewber-header>
+</ion-header>
+<ion-content class="tabs-container" no-padding>
+    <ion-tabs tabsPlacement="top" class="outlet-details-tabs">
+        <ion-tab [root]="dewRewardComponent" [rootParams]="dewRewardAndPointRequest" tabTitle="Dew Reward" tabsHideOnSubPages="true"></ion-tab>|
+        <ion-tab [root]="dewPointComponent" [rootParams]="dewRewardAndPointRequest" tabTitle="Dew Point" tabsHideOnSubPages="true"></ion-tab>|
+        <ion-tab [root]="infoMapComponent" [rootParams]="dewRewardAndPointRequest" tabTitle="Info / Map" tabsHideOnSubPages="true"></ion-tab>
+    </ion-tabs>
+</ion-content>

@@ -1,0 +1,101 @@
+<ion-content class="register-content">
+    <ion-row class="logo-row register-header">
+        <ion-col col-12>
+            <ion-row text-center>
+                <ion-col col-2>
+                    <button ion-button color="white" icon-only clear navPop>
+                        <ion-icon name="arrow-round-back"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col col-8>
+                    <p class="f-26 m-0 pt-5 text-center" ion-text color="white">{{header}} </p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-6 offset-3 *ngIf="referralCode">
+                    <div class="file-container" (click)="presentActionSheet()">
+                        <img src="{{ pathForImage(lastImage) }}" *ngIf="lastImage" class="file-uploaded">
+                        <div class="file-img-padding">
+                            <img src="assets/img/user.png" *ngIf="!lastImage" class="file-img-background">
+                        </div>
+                    </div>
+                    <ion-icon name="create" color="white" class="register-profile-edit" (click)="presentActionSheet()"></ion-icon>
+                </ion-col>
+                <ion-col col-6 offset-3 *ngIf="updateScreen">
+                    <div class="file-container" (click)="presentActionSheet()">
+                        <img src="{{ pathForImage(lastImage) }}" *ngIf="lastImage" class="file-uploaded">
+                        <div class="">
+                            <span *ngIf="!lastImage">
+                                <img src="{{base_url}}{{profileDetails.profile_picture}}" *ngIf="!profileDetails.profile_picture == ''" class="file-uploaded">
+                                <!-- <img  src="assets/img/test.svg" class="file-img-background"> -->
+                                <div class="file-img-padding" *ngIf="profileDetails.profile_picture == ''">
+                                    <img src="assets/img/user.png" *ngIf="!lastImage">
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <ion-icon name="create" color="white" class="register-profile-edit" (click)="presentActionSheet()"></ion-icon>
+                </ion-col>
+                
+            </ion-row>
+        </ion-col>
+
+    </ion-row>
+    <div class="register-box" class="registration-grid">
+        <form name="userForm" [formGroup]="registerForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list class="registration-elements mb-0">
+                        <ion-item class="form-element">
+                            <ion-input type="text" color="dark" placeholder="First Name" ion-text name="firstName" formControlName="firstname"></ion-input>
+                        </ion-item>
+                        <ion-item class="form-element">
+                            <ion-input type="text" color="dark" placeholder="Second Name" ion-text name="lastName" formControlName="lastname"></ion-input>
+                        </ion-item>
+                        <ion-grid no-padding>
+                            <ion-row>
+                                <ion-col col-12>
+                                    <ion-item class="form-element">
+                                        <ion-select formControlName="country" placeholder="Select country">
+                                            <ion-option value="{{country._id}}" *ngFor="let country of countryList">{{country.country_name}}</ion-option>
+                                        </ion-select>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <ion-grid no-padding>
+                            <ion-row>
+                                <ion-col col-4>
+                                    <ion-item class="form-element-1 pl-0">
+                                        <ion-select formControlName="dialCode" placeholder="+44" style="font-size: 16px;">
+                                            <ion-option value="{{country._id}}" *ngFor="let country of countryList">{{country.dial_code}} - {{country.country_name}}</ion-option>
+                                        </ion-select>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-8>
+                                    <ion-item class="form-element-2">
+                                        <ion-input type="number" color="dark" placeholder="Phone No" ion-text name="phoneNo" formControlName="phone_no"></ion-input>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <ion-item class="form-element">
+                            <ion-input type="text" color="dark" placeholder="Email ID" ion-text name="emailId" formControlName="email"></ion-input>
+                        </ion-item>
+                        <ion-item class="form-element" *ngIf="referralCode">
+                            <ion-input type="text" color="dark" placeholder="Referral Code" ion-text name="referral_code" formControlName="referral_code"></ion-input>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-8 offset-2>
+                    <button ion-button round type="submit" color="primary" block (click)="uploadData()">{{ profile_button_text }}</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+
+    </div>
+</ion-content>

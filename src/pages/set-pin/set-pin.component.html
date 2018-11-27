@@ -1,0 +1,42 @@
+<ion-header>
+<ion-navbar color="white" hideBackButton>
+<ion-buttons left *ngIf="loginStatus">
+    <button ion-button navPop>
+        <ion-icon name="arrow-back"></ion-icon>
+    </button>
+</ion-buttons>
+
+<ion-title text-center>Change PIN</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content center text-center padding>
+    <form name="setPinForm" class="setPinForm" [formGroup]="setPinForm">
+        <ion-row>
+            <ion-col>
+                <p>&nbsp;</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-input type="number" ion-text name="Enter OTP" class="custom-input-light" placeholder="Enter the OTP" formControlName="otp"></ion-input>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-input type="password" ion-text name="Enter 4 digit PIN" class="custom-input-light" placeholder="Enter 4 digit PIN"
+                    formControlName="password"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-input type="password" ion-text name="Confirm 4 digit PIN" class="custom-input-light" placeholder="Confirm 4 digit PIN" formControlName="confirm_password"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4 offset-4 text-center>
+                <button ion-button round type="submit" color="primary" block (click)="changePin()">Submit</button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>
