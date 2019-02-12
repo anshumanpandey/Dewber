@@ -1,6 +1,6 @@
 package com.gvtechsolution.fooddeliveryathome.classes;
 
-public class CartFoodItemParent {
+public class CartParentFoodItem {
     int id;
     int image;
     String name;
@@ -10,7 +10,7 @@ public class CartFoodItemParent {
     float delivery_charge;
     float grand_subtotal;
 
-    public CartFoodItemParent(int id, int image, String name, String location, float subtotal, float tax, float delivery_charge, float grand_subtotal) {
+    public CartParentFoodItem(int id, int image, String name, String location, float subtotal, float tax, float delivery_charge, float grand_subtotal) {
         this.id = id;
         this.image = image;
         this.name = name;
