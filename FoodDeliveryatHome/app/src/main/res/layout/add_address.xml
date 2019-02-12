@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/address_close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_bottom_sheet"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Address"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete Address*"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorTextEdit"/>
+        <EditText
+            android:id="@+id/address_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Higlland Woods,Newtown,Rajarhat...."/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery Instructions"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/delivery_instructions_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E.g.Dont ring the bell,near metro station"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address Type"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="25dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+              <Button
+                android:id="@+id/home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Home"
+                android:background="@drawable/add_button"
+                />
+           <!-- <Button
+                android:id="@+id/home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Home"
+                android:background="@drawable/selected_background_button"
+                />-->
+            <Button
+                android:id="@+id/work_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/home_button"
+                android:text="Work"
+                android:background="@drawable/add_button"
+                android:layout_marginLeft="15dp"
+                />
+            <Button
+                android:id="@+id/other_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/work_button"
+                android:text="Other"
+                android:background="@drawable/add_button"
+                android:layout_marginLeft="15dp"
+                />
+
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Save"
+            android:background="@drawable/rounded_register_button"
+            />
+       </LinearLayout>
+
+</LinearLayout>

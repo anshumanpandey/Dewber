@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.user.FilterByFoodItemActivity">
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/filter_by_food_item_screen_user_location_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="YOUR LOCATION"
+            android:textColor="@color/searchText"
+            android:textSize="12dp"
+            android:drawableStart="@drawable/ic_room_black_24dp"
+            android:drawableLeft="@drawable/ic_room_black_24dp"
+            android:drawablePadding="7dp"
+            android:layout_marginLeft="10dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/filter_by_food_item_screen_user_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_editlocation"
+                android:lines="1"
+                android:hint="Salt Lake Sector V,Salt Lake City"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/searchText"
+                android:textColorHint="@color/searchText"
+                android:textStyle="normal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="4dp"
+                />
+            <Button
+                android:id="@+id/filter_by_food_item_screen_user_location_change_button"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:text="change"
+                android:textSize="10dp"
+                android:textColor="@color/colorTextView"
+                android:background="@drawable/rounded_change_button"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_popular_restaurant_recyclerview"
+            android:layout_width="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</RelativeLayout>
