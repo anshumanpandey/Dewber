@@ -1,10 +1,12 @@
 package com.gvtechsolution.fooddeliveryathome.data;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.classes.CartChildFoodItem;
-import com.gvtechsolution.fooddeliveryathome.classes.CartParentFoodItem;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemCategory;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemMenu;
+import com.gvtechsolution.fooddeliveryathome.model.CartChildFoodItem;
+import com.gvtechsolution.fooddeliveryathome.model.CartParentFoodItem;
+import com.gvtechsolution.fooddeliveryathome.model.FoodItemCategory;
+import com.gvtechsolution.fooddeliveryathome.model.FoodItemMenu;
+import com.gvtechsolution.fooddeliveryathome.model.NotificationDetails;
+import com.gvtechsolution.fooddeliveryathome.model.UserOrderDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,6 +95,20 @@ public class StaticData {
         child_food_item.add(two);
         return child_food_item;
     }
-
-
+    public static List<NotificationDetails> getNotificationList(){
+        List<NotificationDetails> notification_list  = new ArrayList<>();
+        NotificationDetails one = new NotificationDetails(4,"02-Feb-2019 16:05","New Order #1941 Total amount:325$");
+        notification_list.add(one);
+        NotificationDetails two = new NotificationDetails(4,"07-Feb-2019 16:05","New Order #2059 Total amount:120$");
+        notification_list.add(two);
+        return notification_list;
+    }
+    public  static List<UserOrderDetails> getOrderHistoryList(){
+        List<UserOrderDetails> order_list = new ArrayList<>();
+        UserOrderDetails one = new UserOrderDetails(5,R.drawable.resturant_zodiac,"XII ZODIAC","ChinarPark,Newtown,Rajarhat","Mutton Biriyani","April 11,2018 at 12.57 PM","INR 500");
+        order_list.add(one);
+        UserOrderDetails two = new UserOrderDetails(5,R.drawable.resturant_zodiac,"Roll In Out","ChinarPark,Newtown,Rajarhat","Chicken Rezalla","Jan 20,2019 at 12.02 PM","INR 300");
+        order_list.add(two);
+        return order_list;
+    }
 }

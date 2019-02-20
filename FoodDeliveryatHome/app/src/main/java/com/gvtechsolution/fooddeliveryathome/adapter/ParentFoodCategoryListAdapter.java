@@ -1,7 +1,6 @@
 package com.gvtechsolution.fooddeliveryathome.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemCategory;
+import com.gvtechsolution.fooddeliveryathome.model.FoodItemCategory;
 import com.gvtechsolution.fooddeliveryathome.data.StaticData;
 
 import java.util.List;

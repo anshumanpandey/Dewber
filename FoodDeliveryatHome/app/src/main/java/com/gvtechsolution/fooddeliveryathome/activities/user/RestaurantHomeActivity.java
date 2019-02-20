@@ -5,17 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.ActionMode;
 import android.view.Menu;
-import android.widget.Toolbar;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.adapter.ChildFoodItemListAdapter;
 import com.gvtechsolution.fooddeliveryathome.adapter.ParentFoodCategoryListAdapter;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemMenu;
+import com.gvtechsolution.fooddeliveryathome.model.FoodItemMenu;
 import com.gvtechsolution.fooddeliveryathome.data.StaticData;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantHomeActivity extends AppCompatActivity {

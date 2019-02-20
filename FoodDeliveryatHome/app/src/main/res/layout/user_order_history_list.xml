@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="2dp"
+    android:layout_margin="4dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/order_history_restaurant_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mutton_biryani"
+        app:riv_corner_radius="10dp" />
+
+    <TextView
+        android:id="@+id/order_history_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/order_history_restaurant_image"
+        android:text="The Biriyani INC"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextEdit"/>
+
+    <TextView
+        android:id="@+id/order_history_restaurant_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/order_history_restaurant_image"
+        android:layout_below="@+id/order_history_restaurant_name"
+        android:text="Salt Lake, Sector v"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        />
+    <View
+        android:id="@+id/order_history_view1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/recyclerIconBg"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/order_history_restaurant_image"/>
+
+    <TextView
+        android:id="@+id/order_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/order_history_view1"
+        android:text="ITEMS"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+    <TextView
+        android:id="@+id/order_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/order_item_text"
+        android:text="1* Mutton Biriyani"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/order_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/order_item_description"
+        android:text="ORDERED ON"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+    <TextView
+        android:id="@+id/order_date_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/order_date_text"
+        android:text="Jan 11,2019 at 12.51pm"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/order_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/order_date_description"
+        android:text="TOTAL"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+    <TextView
+        android:id="@+id/order_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/order_total_text"
+        android:text="INR-224"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        />
+    <View
+        android:id="@+id/order_history_view2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/recyclerIconBg"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/order_total_amount"/>
+    <TextView
+        android:id="@+id/order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/order_history_view2"
+        android:text="Delivered"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+    <Button
+        android:id="@+id/feedback_button"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:textSize="10dp"
+        android:textColor="@color/colorTextView"
+        android:background="@drawable/rounded_change_button"
+        android:text="Rate it"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/order_history_view2"
+        android:layout_alignParentRight="true"
+        />
+    <View
+        android:id="@+id/order_history_view3"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/recyclerIconBg"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/order_status"/>
+</RelativeLayout>

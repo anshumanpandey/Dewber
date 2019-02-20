@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.classes.CartParentFoodItem;
+import com.gvtechsolution.fooddeliveryathome.model.CartParentFoodItem;
 import com.gvtechsolution.fooddeliveryathome.data.StaticData;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;

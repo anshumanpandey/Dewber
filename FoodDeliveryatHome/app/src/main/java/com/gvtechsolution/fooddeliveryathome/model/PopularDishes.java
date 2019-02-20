@@ -1,4 +1,4 @@
-package com.gvtechsolution.fooddeliveryathome.classes;
+package com.gvtechsolution.fooddeliveryathome.model;
 
 public class PopularDishes {
     private int id;

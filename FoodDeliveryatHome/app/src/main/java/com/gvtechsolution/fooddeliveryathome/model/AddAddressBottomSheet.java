@@ -1,4 +1,4 @@
-package com.gvtechsolution.fooddeliveryathome.classes;
+package com.gvtechsolution.fooddeliveryathome.model;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

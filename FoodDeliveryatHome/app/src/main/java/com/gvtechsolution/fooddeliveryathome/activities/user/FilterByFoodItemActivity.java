@@ -1,16 +1,14 @@
 package com.gvtechsolution.fooddeliveryathome.activities.user;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ImageView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
 import com.gvtechsolution.fooddeliveryathome.adapter.HomeResturantListAdapter;
-import com.gvtechsolution.fooddeliveryathome.classes.ResturantItem;
+import com.gvtechsolution.fooddeliveryathome.model.ResturantItem;
 
 import java.util.ArrayList;
 import java.util.List;

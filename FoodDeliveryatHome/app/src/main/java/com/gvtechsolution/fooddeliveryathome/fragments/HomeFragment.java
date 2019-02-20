@@ -16,12 +16,10 @@ import android.widget.EditText;
 import com.gvtechsolution.fooddeliveryathome.R;
 import com.gvtechsolution.fooddeliveryathome.activities.user.EditAddressActivity;
 import com.gvtechsolution.fooddeliveryathome.activities.user.FilterByFoodItemActivity;
-import com.gvtechsolution.fooddeliveryathome.activities.user.RestaurantHomeActivity;
 import com.gvtechsolution.fooddeliveryathome.adapter.HomeResturantListAdapter;
 import com.gvtechsolution.fooddeliveryathome.adapter.HomeScreenPopularDishesListAdapter;
-import com.gvtechsolution.fooddeliveryathome.classes.PopularDishes;
-import com.gvtechsolution.fooddeliveryathome.classes.ResturantItem;
-import com.makeramen.roundedimageview.RoundedImageView;
+import com.gvtechsolution.fooddeliveryathome.model.PopularDishes;
+import com.gvtechsolution.fooddeliveryathome.model.ResturantItem;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.classes.AddAddressBottomSheet;
+import com.gvtechsolution.fooddeliveryathome.model.AddAddressBottomSheet;
 
 public class EditAddressActivity extends AppCompatActivity {
 

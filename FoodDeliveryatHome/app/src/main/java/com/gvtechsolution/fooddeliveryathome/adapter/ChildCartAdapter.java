@@ -8,8 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.classes.CartChildFoodItem;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemCategory;
+import com.gvtechsolution.fooddeliveryathome.model.CartChildFoodItem;
 
 import java.util.List;
 

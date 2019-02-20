@@ -1,4 +1,4 @@
-package com.gvtechsolution.fooddeliveryathome.classes;
+package com.gvtechsolution.fooddeliveryathome.model;
 
 public class FoodItemCategory {
     private int id;

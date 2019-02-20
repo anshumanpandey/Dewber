@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.classes.PopularDishes;
+import com.gvtechsolution.fooddeliveryathome.model.PopularDishes;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
@@ -35,12 +35,6 @@ public class HomeScreenPopularDishesListAdapter extends RecyclerView.Adapter<Hom
         View view = inflater.inflate(R.layout.home_screen_popular_dishes_list,viewGroup,false);
         return new HomeScreenPopularDishesListViewHolder(view);
     }
-    /*@Override
-    public HomeScreenFoodCategoryVerticalListAdapter.HomeScreenFoodCategoryVerticalListViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View view =inflater.inflate(R.layout.home_screen_food_category_vertical_list_item,viewGroup,false);
-        return new HomeScreenFoodCategoryVerticalListViewHolder(view);
-    }*/
 
     @Override
     public void onBindViewHolder(HomeScreenPopularDishesListViewHolder homeScreenPopularDishesListViewHolder, int i) {

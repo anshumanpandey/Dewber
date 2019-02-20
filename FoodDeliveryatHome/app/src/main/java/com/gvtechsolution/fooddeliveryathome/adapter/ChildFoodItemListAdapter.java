@@ -9,10 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.activities.user.FilterByFoodItemActivity;
 import com.gvtechsolution.fooddeliveryathome.activities.user.FoodItemDetailsActivity;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemCategory;
-import com.gvtechsolution.fooddeliveryathome.classes.FoodItemMenu;
+import com.gvtechsolution.fooddeliveryathome.model.FoodItemMenu;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 
@@ -40,12 +38,6 @@ public class ChildFoodItemListAdapter extends RecyclerView.Adapter<ChildFoodItem
         View view = inflater.inflate(R.layout.restaurant_child_fooditem_list,viewGroup,false);
         return new ChildFoodItemListViewHolder(view);
     }
-    /*@Override
-    public HomeScreenFoodCategoryVerticalListAdapter.HomeScreenFoodCategoryVerticalListViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View view =inflater.inflate(R.layout.home_screen_food_category_vertical_list_item,viewGroup,false);
-        return new HomeScreenFoodCategoryVerticalListViewHolder(view);
-    }*/
 
     @Override
     public void onBindViewHolder(ChildFoodItemListViewHolder childFoodItemListViewHolder, int i) {

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2.5dp"
+    android:paddingRight="2.5dp"
+    android:orientation="vertical"
+    android:nestedScrollingEnabled="true">
+    <FrameLayout
+        android:id="@+id/user_account_details_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</ScrollView>

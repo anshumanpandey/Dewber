@@ -14,7 +14,11 @@
         <activity
             android:name=".activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.user.RegistrationActivity"
@@ -38,13 +42,12 @@
         <activity
             android:name=".activities.user.EditAddressActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.user.CartActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".activities.user.CartActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.AccountActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.user.OrderActivity"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,6 @@
 package com.gvtechsolution.fooddeliveryathome.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.activities.user.RestaurantHomeActivity;
-import com.gvtechsolution.fooddeliveryathome.classes.ResturantItem;
+import com.gvtechsolution.fooddeliveryathome.model.ResturantItem;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.gvtechsolution.fooddeliveryathome.R;
 import com.squareup.picasso.Picasso;
