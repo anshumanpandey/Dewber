@@ -1,6 +1,7 @@
 package com.gvtechsolution.fooddeliveryathome.data;
 
 import com.gvtechsolution.fooddeliveryathome.R;
+import com.gvtechsolution.fooddeliveryathome.model.BusinessFoodItemList;
 import com.gvtechsolution.fooddeliveryathome.model.CartChildFoodItem;
 import com.gvtechsolution.fooddeliveryathome.model.CartParentFoodItem;
 import com.gvtechsolution.fooddeliveryathome.model.FoodItemCategory;
@@ -110,5 +111,13 @@ public class StaticData {
         UserOrderDetails two = new UserOrderDetails(5,R.drawable.resturant_zodiac,"Roll In Out","ChinarPark,Newtown,Rajarhat","Chicken Rezalla","Jan 20,2019 at 12.02 PM","INR 300");
         order_list.add(two);
         return order_list;
+    }
+    public static List<BusinessFoodItemList> getAllFoodItem(){
+        List<BusinessFoodItemList> item_list = new ArrayList<>();
+        BusinessFoodItemList one = new BusinessFoodItemList(6,"Mutton Biriyani","rice with raita",320,R.drawable.mutton_biryani);
+        item_list.add(one);
+        BusinessFoodItemList two = new BusinessFoodItemList(6,"Sorshe Illish","Illish with spicy sorshe curry",390,R.drawable.sorshebatta_illish);
+        item_list.add(two);
+        return item_list;
     }
 }

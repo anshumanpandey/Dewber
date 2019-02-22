@@ -16,4 +16,6 @@
     <string name="use_current_location">Use Current Location</string>
     <string name="add_address">Add New Address</string>
     <string name="saved_address">Your saved address</string>
+    <string name="title_activity_business_food_item_details">BusinessFoodItemDetailsActivity
+    </string>
 </resources>
