@@ -10,13 +10,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.fragments.AddProfilePictureFragment;
+import com.gvtechsolution.fooddeliveryathome.fragments.CustomizeItemFragment;
 import com.gvtechsolution.fooddeliveryathome.listener.ReplaceFragment;
 import com.gvtechsolution.fooddeliveryathome.model.BusinessFoodItemList;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
-
-
 import java.util.List;
 
 public class ViewFoodItemListAdapter extends RecyclerView.Adapter<ViewFoodItemListAdapter.ViewFoodItemListViewHolder> {
@@ -51,19 +49,25 @@ public class ViewFoodItemListAdapter extends RecyclerView.Adapter<ViewFoodItemLi
         //binding the data with the viewholder views
         viewFoodItemListViewHolder.textViewItemName.setText(food_item.getItem_name());
         viewFoodItemListViewHolder.textViewItemDescription.setText(food_item.getItem_description());
-        viewFoodItemListViewHolder.textViewItemPrice.setText(String.valueOf(food_item.getPrice()));
+        viewFoodItemListViewHolder.textViewItemPrice.setText("$"+String.valueOf(food_item.getPrice()));
         //viewFoodItemListViewHolder.imageView.setImageDrawable(mCtx.getResources().getDrawable(food_item.getImage()));
         Picasso.get().load(food_item.getImage()).into(viewFoodItemListViewHolder.imageView);
         //view_food_item_add
+        viewFoodItemListViewHolder.textCustomize.setOnClickListener(customize_listener);
         viewFoodItemListViewHolder.add.setOnClickListener(add_listener);
     }
     private View.OnClickListener add_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            listener.onChangeFragment(new AddProfilePictureFragment(),true);
+            listener.onChangeFragment(new CustomizeItemFragment(),true);
         }
     };
-
+    private View.OnClickListener customize_listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            listener.onChangeFragment(new CustomizeItemFragment(),true);
+        }
+    };
 
 
     @Override
@@ -73,7 +77,7 @@ public class ViewFoodItemListAdapter extends RecyclerView.Adapter<ViewFoodItemLi
 
     class ViewFoodItemListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewItemName, textViewItemDescription, textViewItemPrice;
+        TextView textViewItemName, textViewItemDescription, textViewItemPrice,textCustomize;
         RoundedImageView imageView;
         Button add;
 
@@ -82,6 +86,7 @@ public class ViewFoodItemListAdapter extends RecyclerView.Adapter<ViewFoodItemLi
             textViewItemName = itemView.findViewById(R.id.view_food_item_name);
             textViewItemDescription = itemView.findViewById(R.id.view_food_item_description);
             textViewItemPrice = itemView.findViewById(R.id.view_food_item_price);
+            textCustomize = itemView.findViewById(R.id.view_food_item_customize);
             imageView = itemView.findViewById(R.id.view_food_item_image);
             add = itemView.findViewById(R.id.view_food_item_add);
         }

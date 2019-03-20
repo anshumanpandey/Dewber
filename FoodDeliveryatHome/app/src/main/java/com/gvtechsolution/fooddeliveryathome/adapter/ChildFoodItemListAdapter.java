@@ -47,8 +47,8 @@ public class ChildFoodItemListAdapter extends RecyclerView.Adapter<ChildFoodItem
         //binding the data with the viewholder views
         childFoodItemListViewHolder.textViewItemName.setText(food_item.getTitle());
         childFoodItemListViewHolder.textViewItemDescription.setText(food_item.getDescription());
-        childFoodItemListViewHolder.textViewItemPrice.setText(String.valueOf(food_item.getPrice()));
-        Picasso.get().load(food_item.getRestaurant_image()).into(childFoodItemListViewHolder.imageView);
+        childFoodItemListViewHolder.textViewItemPrice.setText("$"+String.valueOf(food_item.getPrice()));
+        Picasso.get().load(food_item.getRestaurant_image()).resize(150,150).into(childFoodItemListViewHolder.imageView);
         //homeResturantListViewHolder.imageView.setImageResource(R.drawable.dominos);
         //resturant_home_food_item_image
         childFoodItemListViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +57,15 @@ public class ChildFoodItemListAdapter extends RecyclerView.Adapter<ChildFoodItem
                 mCtx.startActivity(intent);
             }
         });
+        childFoodItemListViewHolder.textViewCustomize.setOnClickListener(customize_listener);
     }
-
+    private View.OnClickListener customize_listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(mCtx, FoodItemDetailsActivity.class);
+            mCtx.startActivity(intent);
+        }
+    };
 
     @Override
     public int getItemCount() {
@@ -68,7 +75,7 @@ public class ChildFoodItemListAdapter extends RecyclerView.Adapter<ChildFoodItem
 
     class ChildFoodItemListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewItemName, textViewItemDescription, textViewItemPrice;
+        TextView textViewItemName, textViewItemDescription, textViewItemPrice, textViewCustomize;
         RoundedImageView imageView;
 
         public ChildFoodItemListViewHolder(View itemView) {
@@ -77,6 +84,7 @@ public class ChildFoodItemListAdapter extends RecyclerView.Adapter<ChildFoodItem
             textViewItemDescription = itemView.findViewById(R.id.restaurant_home_food_item_description);
             textViewItemPrice = itemView.findViewById(R.id.restaurant_home_food_item_price);
             imageView = itemView.findViewById(R.id.resturant_home_food_item_image);
+            textViewCustomize = itemView.findViewById(R.id.restaurant_home_food_item_customize);
         }
     }
 }

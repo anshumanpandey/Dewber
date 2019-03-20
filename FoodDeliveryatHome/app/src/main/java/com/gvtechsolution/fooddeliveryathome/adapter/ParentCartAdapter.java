@@ -1,6 +1,7 @@
 package com.gvtechsolution.fooddeliveryathome.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
+import com.gvtechsolution.fooddeliveryathome.activities.user.RestaurantHomeActivity;
 import com.gvtechsolution.fooddeliveryathome.model.CartParentFoodItem;
 import com.gvtechsolution.fooddeliveryathome.data.StaticData;
 import com.makeramen.roundedimageview.RoundedImageView;
@@ -48,11 +50,17 @@ public class ParentCartAdapter extends RecyclerView.Adapter<ParentCartAdapter.Pa
         //binding the data with the viewholder views
         parentCartViewHolder.name.setText(food_item.getName());
         parentCartViewHolder.location.setText(food_item.getLocation());
-        parentCartViewHolder.subtotal.setText(String.valueOf(food_item.getSubtotal()));
-        parentCartViewHolder.tax.setText(String.valueOf(food_item.getTax()));
-        parentCartViewHolder.delivery_charge.setText(String.valueOf(food_item.getDelivery_charge()));
-        parentCartViewHolder.grand_subtotal.setText(String.valueOf(food_item.getGrand_subtotal()));
+        parentCartViewHolder.subtotal.setText("$"+String.valueOf(food_item.getSubtotal()));
+        parentCartViewHolder.tax.setText("$"+String.valueOf(food_item.getTax()));
+        parentCartViewHolder.delivery_charge.setText("$"+String.valueOf(food_item.getDelivery_charge()));
+        parentCartViewHolder.grand_subtotal.setText("$"+String.valueOf(food_item.getGrand_subtotal()));
         Picasso.get().load(food_item.getImage()).into(parentCartViewHolder.imageView);
+        parentCartViewHolder.add_more_item.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(mCtx, RestaurantHomeActivity.class);
+                mCtx.startActivity(intent);
+            }
+        });
 
         LinearLayoutManager linearLayoutManagerVertical = new LinearLayoutManager(mCtx);
         linearLayoutManagerVertical.setOrientation(LinearLayoutManager.VERTICAL);
@@ -76,7 +84,7 @@ public class ParentCartAdapter extends RecyclerView.Adapter<ParentCartAdapter.Pa
 
     class ParentCartViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name,location,subtotal,tax,delivery_charge,grand_subtotal;
+        TextView name,location,subtotal,tax,delivery_charge,grand_subtotal,add_more_item;
         RoundedImageView imageView;
         RecyclerView child_cart_food_item_list;
         public ParentCartViewHolder(View itemView) {
@@ -87,6 +95,7 @@ public class ParentCartAdapter extends RecyclerView.Adapter<ParentCartAdapter.Pa
             tax = itemView.findViewById(R.id.cart_food_item_tax_amount);
             delivery_charge = itemView.findViewById(R.id.cart_food_item_delivery_charge_amount);
             grand_subtotal = itemView.findViewById(R.id.cart_food_item_grand_subtotal_amount);
+            add_more_item = itemView.findViewById(R.id.parent_cart_add_more_item);
             imageView = itemView.findViewById(R.id.restaurant_cart_image);
             child_cart_food_item_list = (RecyclerView) itemView.findViewById(R.id.child_cart_list);
 

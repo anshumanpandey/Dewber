@@ -8,8 +8,9 @@ public class UserOrderDetails {
     String item_name;
     String order_date;
     String total_amount;
+    String order_status;
 
-    public UserOrderDetails(int id,int restaurant_image, String restaurant_name, String restaurant_address, String item_name, String order_date, String total_amount) {
+    public UserOrderDetails(int id,int restaurant_image, String restaurant_name, String restaurant_address, String item_name, String order_date, String total_amount,String order_status) {
         this.id = id;
         this.restaurant_image = restaurant_image;
         this.restaurant_name = restaurant_name;
@@ -17,6 +18,7 @@ public class UserOrderDetails {
         this.item_name = item_name;
         this.order_date = order_date;
         this.total_amount = total_amount;
+        this.order_status = order_status;
     }
 
     public int getId() {
@@ -45,5 +47,9 @@ public class UserOrderDetails {
 
     public String getTotal_amount() {
         return total_amount;
+    }
+
+    public String getOrder_status() {
+        return order_status;
     }
 }

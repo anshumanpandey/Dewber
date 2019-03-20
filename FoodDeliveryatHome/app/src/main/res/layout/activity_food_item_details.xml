@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mutton Biriyani"
-        android:textSize="35dp"
+        android:textSize="22dp"
         android:textStyle="bold"
         android:textColor="@color/colorTextEdit"/>
     <TextView
@@ -93,4 +93,14 @@
                 android:layout_marginTop="18dp"/>
         </LinearLayout>
     </LinearLayout>
+    <Button
+        android:id="@+id/add_to_cart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounded_register_button"
+        android:text="Add to cart"
+        android:textSize="17dp"
+        android:textColor="@color/colorTextView"
+        />
 </LinearLayout>

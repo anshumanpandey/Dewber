@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +16,8 @@
         android:orientation="vertical"
         android:paddingStart="25dp"
         android:paddingEnd="25dp"
-        android:background="#CC000000">
+        android:background="#CC000000"
+        android:paddingBottom="50dp">
         <TextView
             android:id="@+id/user_registration_logo"
             android:layout_width="match_parent"
@@ -132,37 +133,37 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="25dp"
+            android:weightSum="1"
             >
             <Button
-                android:id="@+id/login_register_button"
+                android:id="@+id/login_google_button"
                 android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:layout_height="wrap_content"
-                android:text="Google"
+                android:text="Google+"
+                android:textAlignment="textStart"
                 android:textColor="#CC4446"
+                android:drawablePadding="5dp"
                 android:background="@drawable/rounded_google_button"
                 android:layout_marginRight="5dp"
-                android:drawableLeft="@drawable/icon_google"
+                android:paddingLeft="10dp"
                 android:drawableStart="@drawable/icon_google"
-                android:paddingLeft="35dp"
-                android:paddingRight="35dp"
                 />
             <Button
-                android:id="@+id/login_business_link_button"
+                android:id="@+id/login_from_facebook_button"
                 android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:text="Facebook"
-                android:textSize="13dp"
+                android:drawablePadding="5dp"
+                android:textAlignment="textStart"
                 android:textColor="@color/colorTextView"
                 android:background="@drawable/rounded_facebook_button"
                 android:layout_marginLeft="5dp"
                 android:drawableLeft="@drawable/icon_fb"
-                android:drawableStart="@drawable/icon_fb"
-                android:paddingLeft="35dp"
-                android:paddingRight="35dp"
+                android:paddingLeft="10dp"
                 />
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

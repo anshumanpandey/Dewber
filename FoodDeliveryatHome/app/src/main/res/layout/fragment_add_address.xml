@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bottom_sheet"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical"
-    android:padding="@dimen/activity_horizontal_margin"
-    app:behavior_hideable="true"
-    app:behavior_peekHeight="100dp"
-    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    tools:context=".fragments.AddAddressFragment"
+    android:layout_margin="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_margin="10dp"
         >
         <Button
-            android:id="@+id/address_close_button"
+            android:id="@+id/add_address_close_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/ic_bottom_sheet"/>
+            android:background="@drawable/ic_arrow_back"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,11 +35,11 @@
             android:id="@+id/address_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Higlland Woods,Newtown,Rajarhat...."/>
+            android:hint="Enter complete address.."/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Delivery Instructions"
+            android:hint="Delivery instructions"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_marginTop="5dp"/>
         <TextView
@@ -63,20 +59,20 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="5dp">
-              <Button
+            <Button
                 android:id="@+id/home_button"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="Home"
                 android:background="@drawable/add_button"
                 />
-           <!-- <Button
-                android:id="@+id/home_button"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="Home"
-                android:background="@drawable/selected_background_button"
-                />-->
+            <!-- <Button
+                 android:id="@+id/home_button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="40dp"
+                 android:text="Home"
+                 android:background="@drawable/selected_background_button"
+                 />-->
             <Button
                 android:id="@+id/work_button"
                 android:layout_width="wrap_content"
@@ -98,12 +94,13 @@
 
         </RelativeLayout>
         <Button
+            android:id="@+id/save_address_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:text="Save"
             android:background="@drawable/rounded_register_button"
             />
-       </LinearLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>

@@ -55,11 +55,12 @@ public class HomeResturantListAdapter extends RecyclerView.Adapter<HomeResturant
         //binding the data with the viewholder views
         homeResturantListViewHolder.textViewTitle.setText(resturant_item.getTitle());
         homeResturantListViewHolder.textViewCuisine.setText(resturant_item.getCuisine());
-        homeResturantListViewHolder.textViewPrice.setText(String.valueOf(resturant_item.getPrice()));
+        homeResturantListViewHolder.textViewPrice.setText("$"+String.valueOf(resturant_item.getPrice()));
         homeResturantListViewHolder.textViewDeliveryTime.setText(resturant_item.getDelivery_time());
+        homeResturantListViewHolder.textViewDistance.setText(resturant_item.getDistance());
         homeResturantListViewHolder.textViewRating.setRating(resturant_item.getRating());
         //Drawable d = mCtx.getResources().getDrawable(resturant_item.getResturant_image());
-        Picasso.get().load(resturant_item.getResturant_image()).into(homeResturantListViewHolder.imageView);
+        Picasso.get().load(resturant_item.getResturant_image()).resize(150,150).into(homeResturantListViewHolder.imageView);
         //homeResturantListViewHolder.imageView.setImageResource(R.drawable.dominos);
             homeResturantListViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
@@ -78,7 +79,7 @@ public class HomeResturantListAdapter extends RecyclerView.Adapter<HomeResturant
 
     class HomeResturantListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewTitle, textViewCuisine, textViewPrice,textViewDeliveryTime;
+        TextView textViewTitle, textViewCuisine, textViewPrice,textViewDeliveryTime,textViewDistance;
         RatingBar textViewRating;
         RoundedImageView imageView;
 
@@ -90,6 +91,7 @@ public class HomeResturantListAdapter extends RecyclerView.Adapter<HomeResturant
             textViewPrice = itemView.findViewById(R.id.popular_resturant_price);
             textViewDeliveryTime = itemView.findViewById(R.id.popular_resturant_delivery_time);
             textViewRating = itemView.findViewById(R.id.popular_resturant_rating);
+            textViewDistance = itemView.findViewById(R.id.popular_resturant_distance);
             imageView = itemView.findViewById(R.id.popular_resturant_image);
         }
     }

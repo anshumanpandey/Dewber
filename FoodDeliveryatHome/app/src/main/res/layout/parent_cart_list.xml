@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@id/restaurant_cart_image"
-                    android:text="The Biriyani INC"
+                    android:text="The Biryani INC"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textStyle="bold"
                     android:textColor="@color/colorTextEdit"/>
@@ -91,6 +91,7 @@
                 android:orientation="vertical"
                 android:layout_marginTop="5dp">
                 <TextView
+                    android:id="@+id/parent_cart_add_more_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Add More Items"

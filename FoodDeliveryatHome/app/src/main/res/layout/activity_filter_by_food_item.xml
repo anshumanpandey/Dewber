@@ -18,19 +18,21 @@
             android:text="YOUR LOCATION"
             android:textColor="@color/searchText"
             android:textSize="12dp"
-            android:drawableStart="@drawable/ic_room_black_24dp"
-            android:drawableLeft="@drawable/ic_room_black_24dp"
+            android:drawableStart="@drawable/ic_location_grey"
+            android:drawableLeft="@drawable/ic_location_grey"
             android:drawablePadding="7dp"
             android:layout_marginLeft="10dp"
             />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <EditText
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <TextView
                 android:id="@+id/filter_by_food_item_screen_user_location"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.8"
                 android:background="@drawable/rounded_editlocation"
                 android:lines="1"
                 android:hint="Salt Lake Sector V,Salt Lake City"
@@ -47,9 +49,10 @@
                 android:layout_marginBottom="4dp"
                 />
             <Button
-                android:id="@+id/filter_by_food_item_screen_user_location_change_button"
-                android:layout_width="50dp"
+                android:id="@+id/filter_by_food_item_user_location_change_button"
+                android:layout_width="0dp"
                 android:layout_height="20dp"
+                android:layout_weight="0.2"
                 android:text="change"
                 android:textSize="10dp"
                 android:textColor="@color/colorTextView"

@@ -1,6 +1,7 @@
 package com.gvtechsolution.fooddeliveryathome.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
+import com.gvtechsolution.fooddeliveryathome.activities.user.NotificationDetailsActivity;
+import com.gvtechsolution.fooddeliveryathome.activities.user.OrderActivity;
 import com.gvtechsolution.fooddeliveryathome.model.NotificationDetails;
 import java.util.List;
 
@@ -37,9 +40,32 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
     @Override
     public void onBindViewHolder(NotificationListViewHolder notificationListViewHolder, int i) {
         //getting the product of the specified position
-        NotificationDetails notifications = notificationList.get(i);
+        final NotificationDetails notifications = notificationList.get(i);
         notificationListViewHolder.notification_datetime.setText(notifications.getNotification_date());
+        notificationListViewHolder.notification_category.setText("***"+notifications.getNotification_category()+"***");
         notificationListViewHolder.notification_description.setText(notifications.getNotification_description());
+        //Log.d("notification_category",notification_desc);
+            notificationListViewHolder.notification_category.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String notification_desc = notifications.getNotification_category();
+                    if(notification_desc.equals("New Order")) {
+                        Intent intent = new Intent(mCtx, OrderActivity.class);
+                        mCtx.startActivity(intent);
+                    }
+                    else if(notification_desc.equals("Special Menu")){
+                        Intent intent = new Intent(mCtx, NotificationDetailsActivity.class);
+                        intent.putExtra("notification_details_fragment","special_menu");
+                        mCtx.startActivity(intent);
+                    }
+                    else if(notification_desc.equals("New Quotation")){
+                        Intent intent = new Intent(mCtx, NotificationDetailsActivity.class);
+                        intent.putExtra("notification_details_fragment","new_quotation");
+                        mCtx.startActivity(intent);
+                    }
+                }
+            });
+
 
       /*  LinearLayoutManager linearLayoutManagerVertical = new LinearLayoutManager(mCtx);
         linearLayoutManagerVertical.setOrientation(LinearLayoutManager.VERTICAL);
@@ -54,7 +80,6 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
 
     }
 
-
     @Override
     public int getItemCount() {
         return notificationList.size();
@@ -62,11 +87,12 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
 
     class NotificationListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView notification_datetime,notification_description;
+        TextView notification_datetime,notification_category,notification_description;
 
         public NotificationListViewHolder(View itemView) {
             super(itemView);
             notification_datetime = itemView.findViewById(R.id.notification_datetime);
+            notification_category = itemView.findViewById(R.id.notification_category);
             notification_description = itemView.findViewById(R.id.notification_description);
         }
     }

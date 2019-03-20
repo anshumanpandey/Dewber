@@ -4,9 +4,11 @@ package com.gvtechsolution.fooddeliveryathome.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -42,6 +44,13 @@ public class ViewFoodItemsFragment extends Fragment implements ReplaceFragment {
         ViewFoodItemListAdapter adapter =
                 new ViewFoodItemListAdapter(getActivity(), StaticData.getAllFoodItem(),this);
         view_all_item_recyclerview.setAdapter(adapter);
+        ((AppCompatActivity)this.getActivity()).getSupportActionBar().setTitle("Menu");
+        //onNavigationItemSelected(navigationView.getMenu().getItem(0));
+
+        Fragment fragment = ((AppCompatActivity)this.getActivity()).getSupportFragmentManager().findFragmentById(R.id.frame_food_item_details);
+        if (fragment instanceof ViewFoodItemsFragment){
+            ((BusinessFoodItemDetailsActivity)this.getActivity()).selectMenu();
+        }
         return view;
     }
     public void onChangeFragment(Fragment fragment, boolean isBack) {

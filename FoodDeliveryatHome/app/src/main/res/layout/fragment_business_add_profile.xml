@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.UserAccountDetailsFragment">
+    tools:context=".fragments.BusinessAddProfileFragment">
     <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".activities.AccountActivity"
+        tools:context=".activities.ProfileActivity"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         >
@@ -19,27 +19,15 @@
             android:layout_marginTop="30dp"
             android:gravity="center">
             <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/imageView1"
+                android:id="@+id/business_add_profile_imageView"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
-                android:src="@drawable/user_icon"
+                android:src="@drawable/profile_pic"
                 android:scaleType="centerCrop"
                 app:riv_corner_radius="30dip"
                 app:riv_border_width="2dip"
                 app:riv_border_color="#333333"
                 app:riv_oval="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="upload Image"
-                android:drawableStart="@drawable/ic_camera"
-                android:drawableLeft="@drawable/ic_camera"
-                android:drawablePadding="7dp"
-                android:gravity="center"
-                android:layout_centerInParent="true"
-                />
-
-
         </RelativeLayout>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -60,11 +48,11 @@
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center"
-                    android:background="@color/colorPrimaryDark"/>
-                <EditText
+                    android:background="@color/transparentGrey"/>
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:text="moumita123@gmail.com"
                     android:padding="8dp"
                     android:inputType="text"
                     android:textColorHint="@color/colorTextEdit"
@@ -73,10 +61,10 @@
                     android:drawablePadding="7dp"
                     android:drawableStart="@drawable/email"
                     />
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="First Name"
+                    android:text="XII Zodiac"
                     android:padding="8dp"
                     android:inputType="text"
                     android:textColorHint="@color/colorTextEdit"
@@ -85,10 +73,10 @@
                     android:drawablePadding="7dp"
                     android:drawableStart="@drawable/username"
                     />
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Last Name"
+                    android:text="Moumita"
                     android:padding="8dp"
                     android:inputType="text"
                     android:textColorHint="@color/colorTextEdit"
@@ -97,10 +85,22 @@
                     android:drawablePadding="7dp"
                     android:drawableStart="@drawable/username"
                     />
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telephone"
+                    android:text="Biswas"
+                    android:padding="8dp"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorTextEdit"
+                    android:textColor="@color/colorTextEdit"
+                    android:drawableLeft="@drawable/username"
+                    android:drawablePadding="7dp"
+                    android:drawableStart="@drawable/username"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9830235674"
                     android:padding="8dp"
                     android:inputType="text"
                     android:textColorHint="@color/colorTextEdit"
@@ -131,11 +131,11 @@
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center"
-                    android:background="@color/colorPrimaryDark"/>
-                <EditText
+                    android:background="@color/transparentGrey"/>
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Current Address"
+                    android:text="Akansha More,Newtown,Kolkata"
                     android:padding="8dp"
                     android:inputType="text"
                     android:textColorHint="@color/colorTextEdit"
@@ -143,13 +143,13 @@
                     android:drawableLeft="@drawable/email"
                     android:drawablePadding="7dp"
                     android:drawableStart="@drawable/email"
-
                     />
                 <Button
+                    android:id="@+id/business_add_profile_edit_button"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Update"
+                    android:text="Edit"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorTextView"
                     android:background="@drawable/rounded_register_button"

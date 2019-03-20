@@ -51,15 +51,16 @@ public class UserOrderHistoryAdapter extends RecyclerView.Adapter<UserOrderHisto
         userOrderHistoryViewHolder.item_description.setText(orders.getItem_name());
         userOrderHistoryViewHolder.order_date.setText(orders.getOrder_date());
         userOrderHistoryViewHolder.total_amount.setText(orders.getTotal_amount());
-        Picasso.get().load(orders.getRestaurant_image()).into(userOrderHistoryViewHolder.restaurant_image);
-        userOrderHistoryViewHolder.feedback_button.setOnClickListener(feedback_listener);
+        userOrderHistoryViewHolder.order_status.setText(orders.getOrder_status());
+        Picasso.get().load(orders.getRestaurant_image()).resize(150,150).into(userOrderHistoryViewHolder.restaurant_image);
+        //userOrderHistoryViewHolder.feedback_button.setOnClickListener(feedback_listener);
     }
-    private View.OnClickListener feedback_listener = new View.OnClickListener() {
+    /*private View.OnClickListener feedback_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             listener.onChangeFragment(new FeedbackFragment(),true);
         }
-    };
+    };*/
 
     @Override
     public int getItemCount() {
@@ -68,7 +69,7 @@ public class UserOrderHistoryAdapter extends RecyclerView.Adapter<UserOrderHisto
 
     class UserOrderHistoryViewHolder extends RecyclerView.ViewHolder {
 
-        TextView restaurant_name,restaurant_location,item_description,order_date,total_amount;
+        TextView restaurant_name,restaurant_location,item_description,order_date,total_amount,order_status;
         RoundedImageView restaurant_image;
         Button feedback_button;
 
@@ -80,7 +81,8 @@ public class UserOrderHistoryAdapter extends RecyclerView.Adapter<UserOrderHisto
             item_description = itemView.findViewById(R.id.order_item_description);
             order_date = itemView.findViewById(R.id.order_date_description);
             total_amount = itemView.findViewById(R.id.order_total_amount);
-            feedback_button = itemView.findViewById(R.id.feedback_button);
+            order_status = itemView.findViewById(R.id.order_status);
+            //feedback_button = itemView.findViewById(R.id.feedback_button);
         }
     }
 }

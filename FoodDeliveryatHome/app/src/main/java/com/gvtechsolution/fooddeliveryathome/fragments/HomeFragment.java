@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.activities.user.EditAddressActivity;
+import com.gvtechsolution.fooddeliveryathome.activities.user.ChangeLocationActivity;
 import com.gvtechsolution.fooddeliveryathome.activities.user.FilterByFoodItemActivity;
 import com.gvtechsolution.fooddeliveryathome.adapter.HomeResturantListAdapter;
 import com.gvtechsolution.fooddeliveryathome.adapter.HomeScreenPopularDishesListAdapter;
@@ -81,18 +81,18 @@ public class HomeFragment extends Fragment {
         popularDishesList.add(
                 new PopularDishes(
                         1,
-                        "Mommo",
+                        "Momo",
                         180,
                         "15-30 Mins",
-                        "Wow Mommo",
-                        R.drawable.kareemz));
+                        "Wow Momo",
+                        R.drawable.kareems));
         popularDishesList.add(
                 new PopularDishes(
                         1,
                         "Hakka Noodles",
                         300,
                         "30-40 Mins",
-                        "ChaowMan,Haldiram",
+                        "ChowMan,Haldiram",
                         R.drawable.kfc));
         popularDishesList.add(
                 new PopularDishes(
@@ -100,7 +100,7 @@ public class HomeFragment extends Fragment {
                         "Ilish Paturi",
                         300,
                         "30-40 Mins",
-                        "BhajohoriManna",
+                        "Bhojohori Manna",
                         R.drawable.sorshebatta_illish));
         popularDishesList.add(
                 new PopularDishes(
@@ -128,11 +128,12 @@ public class HomeFragment extends Fragment {
         resturantItemList.add(
                 new ResturantItem(
                         1,
-                        "XII ZODIAC",
+                        "XII Zodiac",
                         "North Indian,Chicken Masala",
                         200,
-                        "30-40Min",
+                        "30-40 Min",
                         4.5F,
+                        "2 km",
                         R.drawable.resturant_zodiac));
         resturantItemList.add(
                 new ResturantItem(
@@ -140,64 +141,71 @@ public class HomeFragment extends Fragment {
                         "Roll In Out",
                         "Chinese,Noodles",
                         100,
-                        "20-25Min",
+                        "20-25 Min",
                         3.5F,
+                        "2.5 km",
                         R.drawable.resturant_rollinout));
 
         resturantItemList.add(
                 new ResturantItem(
                         1,
-                        "Zareen",
-                        "Mughlai,Biriyani",
+                        "Zaareen",
+                        "Mughlai,Biryani",
                         350,
-                        "35-50Min",
+                        "35-50 Min",
                         4,
-                        R.drawable.kareemz));
+                        "3 km",
+                        R.drawable.kareems));
         resturantItemList.add(
                 new ResturantItem(
                         1,
-                        "The Farn",
-                        "Pestries,Dessert",
+                        "The Fern",
+                        "Pastries,Dessert",
                         50,
-                        "10-15Min",
+                        "10-15 Min",
                         4.5F,
+                        "3 km",
                         R.drawable.resturant_thefarn));
         resturantItemList.add(
                 new ResturantItem(
                         1,
                         "The New Red Chilly",
-                        "Mommo,Pasta",
+                        "Momo,Pasta",
                         70,
-                        "10-15Min",
+                        "10-15 Min",
                         4,
-                        R.drawable.kareemz));
+                        "2.5 km",
+                        R.drawable.kareems));
         resturantItemList.add(
                 new ResturantItem(
                         1,
                         "KFC",
-                        "Burger,Lollypop",
+                        "Burger,Lollipop",
                         200,
-                        "20-30Min",
+                        "20-30 Min",
                         4.5F,
+                        "3.5 km",
                         R.drawable.kfc));
         resturantItemList.add(
                 new ResturantItem(
                         1,
-                        "Dominos",
+                        "Domino's Pizza",
                         "Pizza,Burger",
                         250,
-                        "10-15Min",
+                        "10-15 Min",
                         4.5F,
+                        "4.5 km",
                         R.drawable.dominos));
         resturantItemList.add(
                 new ResturantItem(
                         1,
-                        "Karimz",
-                        "Biriyani,North Indian",
+                        "Kareem's",
+                        "Biryani,North Indian",
                         350,
-                        "40-50Min",
+                        "40-50 Min",
                         4,
-                        R.drawable.kareemz));
+                        "4 km",
+                        R.drawable.kareems));
 
         //creating recyclerview adapter
         HomeResturantListAdapter adapter = new HomeResturantListAdapter(mContext, resturantItemList);
@@ -211,13 +219,12 @@ public class HomeFragment extends Fragment {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(mContext, FilterByFoodItemActivity.class);
-            startActivity(intent);
-        }
+            startActivity(intent); }
     };
   private View.OnClickListener change_address_clicklistener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(mContext, EditAddressActivity.class);
+            Intent intent = new Intent(mContext, ChangeLocationActivity.class);
             startActivity(intent);
         }
 

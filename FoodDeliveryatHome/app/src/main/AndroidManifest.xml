@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gvtechsolution.fooddeliveryathome">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,14 +24,15 @@
         </activity>
         <activity
             android:name=".activities.user.RegistrationActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.business.BusinessRegistrationActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.user.FilterByFoodItemActivity" />
+        <activity android:name=".activities.user.ChangeLocationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.user.FilterByFoodItemActivity"
-            android:theme="@style/AppTheme.MyAppTheme" />
-        <activity android:name=".activities.user.ChangeLocationActivity" />
         <activity
             android:name=".activities.user.HomeActivity"
             android:label="@string/title_activity_home"
@@ -40,19 +43,34 @@
             android:name=".activities.user.FoodItemDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.user.EditAddressActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".activities.user.CartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.AccountActivity" />
-        <activity android:name=".activities.SettingsActivity" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.user.OrderActivity" />
         <activity
             android:name=".activities.business.BusinessFoodItemDetailsActivity"
             android:label="@string/title_activity_business_food_item_details"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.business.BusinessOrderActivity" />
+        <activity android:name=".activities.business.GalleryActivity" />
+        <activity
+            android:name=".activities.PaymentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.business.BusinessSpecialmenuActivity" />
+        <activity android:name=".activities.business.WorkingDaysActivity" />
+        <activity
+            android:name=".activities.user.CustomMenuActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.user.NotificationDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.business.EventOrderActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

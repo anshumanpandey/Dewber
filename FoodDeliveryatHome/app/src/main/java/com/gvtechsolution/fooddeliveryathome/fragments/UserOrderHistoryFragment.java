@@ -42,17 +42,16 @@ public class UserOrderHistoryFragment extends Fragment implements ReplaceFragmen
 
         UserOrderHistoryAdapter adapter = new UserOrderHistoryAdapter(getActivity(),StaticData.getOrderHistoryList(), this);
         order_history_recyclerview.setAdapter(adapter);
-        Button close_button = view.findViewById(R.id.order_history_close_button);
-        close_button.setOnClickListener(close_order_history_listner);
+        //Button close_button = view.findViewById(R.id.user_order_history_close_button);
+        //close_button.setOnClickListener(close_order_history_listner);
         return view;
     }
-    private View.OnClickListener close_order_history_listner = new View.OnClickListener() {
+   /* private View.OnClickListener close_order_history_listner = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(mContext, HomeActivity.class);
-            startActivity(intent);
+            getActivity().finish();
         }
-    };
+    };*/
 
     @Override
     public void onChangeFragment(Fragment fragment, boolean isBack) {

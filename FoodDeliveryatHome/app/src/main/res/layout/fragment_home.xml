@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="2.5dp"
-        android:paddingRight="2.5dp"
-        android:orientation="vertical"
-        android:nestedScrollingEnabled="true">
+    android:layout_height="wrap_content"
+    android:paddingLeft="2.5dp"
+    android:paddingRight="2.5dp"
+    android:paddingBottom="50dp"
+    android:orientation="vertical"
+    android:nestedScrollingEnabled="false">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="2.5dp"
             android:paddingRight="2.5dp"
-            android:orientation="vertical"
-            tools:context=".activities.HomeActivity">
+            >
             <LinearLayout
                 android:id="@+id/top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:orientation="vertical">
                 <TextView
                     android:id="@+id/home_user_location_textview"
@@ -35,22 +27,24 @@
                     android:text="YOUR LOCATION"
                     android:textColor="@color/searchText"
                     android:textSize="12dp"
-                    android:drawableStart="@drawable/ic_room_black_24dp"
-                    android:drawableLeft="@drawable/ic_room_black_24dp"
+                    android:drawableStart="@drawable/ic_location_grey"
+                    android:drawableLeft="@drawable/ic_location_grey"
                     android:drawablePadding="7dp"
                     android:layout_marginLeft="10dp"
                     />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
                     <TextView
                         android:id="@+id/home_user_location"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
                         android:background="@drawable/rounded_editlocation"
                         android:lines="1"
-                        android:hint="Salt Lake Sector V,Salt Lake City"
+                        android:hint="Salt Lake Sector V..."
                         android:inputType="text"
                         android:textSize="18dp"
                         android:paddingLeft="8dp"
@@ -65,8 +59,9 @@
                         />
                     <Button
                         android:id="@+id/home_screen_change_button"
-                        android:layout_width="50dp"
+                        android:layout_width="0dp"
                         android:layout_height="20dp"
+                        android:layout_weight="0.2"
                         android:text="change"
                         android:textSize="10dp"
                         android:textColor="@color/colorTextView"
@@ -103,7 +98,7 @@
                     android:drawableLeft="@drawable/search"
                     android:drawablePadding="7dp"
                     android:ems="10"
-                    android:hint="Search for resturants,dishes.."
+                    android:hint="Search for restaurants,dishes.."
                     android:inputType="text"
                     android:padding="8dp"
                     android:textColor="@color/colorTextEdit"
@@ -141,8 +136,6 @@
                 </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
-
         </RelativeLayout>
-    </ScrollView>
 
-</FrameLayout>
+</ScrollView>

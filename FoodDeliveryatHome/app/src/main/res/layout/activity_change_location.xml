@@ -6,22 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activities.user.ChangeLocationActivity"
     android:orientation="vertical">
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/frame_change_location"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Use Current Location"
-            android:textColor="@color/colorAccent"
-            android:textSize="20dp"
-            android:drawableStart="@drawable/current_location"
-            android:drawableLeft="@drawable/current_location"
-            android:drawablePadding="10dp"
-            android:textStyle="bold"
-            />
-    </LinearLayout>
+        android:layout_height="match_parent">
+    </FrameLayout>
 </LinearLayout>

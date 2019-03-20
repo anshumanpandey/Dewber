@@ -42,7 +42,7 @@ public class ChildCartAdapter extends RecyclerView.Adapter<ChildCartAdapter.Chil
 
         //binding the data with the viewholder views
         childCartViewHolder.item_name.setText(food_item_list.getItem_name());
-        childCartViewHolder.item_amount.setText(String.valueOf(food_item_list.getItem_amount()));
+        childCartViewHolder.item_amount.setText("$"+String.valueOf(food_item_list.getItem_amount()));
 
     }
 

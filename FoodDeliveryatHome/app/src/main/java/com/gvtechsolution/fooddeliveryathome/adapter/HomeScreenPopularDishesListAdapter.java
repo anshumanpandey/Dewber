@@ -1,6 +1,7 @@
 package com.gvtechsolution.fooddeliveryathome.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gvtechsolution.fooddeliveryathome.R;
+import com.gvtechsolution.fooddeliveryathome.activities.user.RestaurantHomeActivity;
 import com.gvtechsolution.fooddeliveryathome.model.PopularDishes;
 import com.makeramen.roundedimageview.RoundedImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,11 +46,18 @@ public class HomeScreenPopularDishesListAdapter extends RecyclerView.Adapter<Hom
 
         //binding the data with the viewholder views
         homeScreenPopularDishesListViewHolder.textViewTitle.setText(popular_dishes.getTitle());
-        homeScreenPopularDishesListViewHolder.textViewPrice.setText(String.valueOf(popular_dishes.getPrice()));
+        homeScreenPopularDishesListViewHolder.textViewPrice.setText("$"+String.valueOf(popular_dishes.getPrice()));
         homeScreenPopularDishesListViewHolder.textViewDeliveryTime.setText(popular_dishes.getDelivery_time());
         homeScreenPopularDishesListViewHolder.textViewRestaurantName.setText(popular_dishes.getRestaurant_name());
-        homeScreenPopularDishesListViewHolder.imageView.setImageDrawable(mCtx.getResources().getDrawable(popular_dishes.getRestaurant_image()));
 
+        Picasso.get().load(popular_dishes.getRestaurant_image()).into(homeScreenPopularDishesListViewHolder.imageView);
+        //homeScreenPopularDishesListViewHolder.imageView.setImageDrawable(mCtx.getResources().getDrawable(popular_dishes.getRestaurant_image()));
+        homeScreenPopularDishesListViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent(mCtx, RestaurantHomeActivity.class);
+                mCtx.startActivity(intent);
+            }
+        });
     }
 
 

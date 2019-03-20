@@ -53,8 +53,10 @@ public class NotificationsFragment extends Fragment {
     private View.OnClickListener close_notification_listner = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(mContext, HomeActivity.class);
-            startActivity(intent);
+            /*Intent intent = new Intent(mContext, HomeActivity.class);
+            startActivity(intent);*/
+            ((SettingsActivity)NotificationsFragment.this.getActivity()).finish();
+
         }
     };
 
@@ -68,7 +70,5 @@ public class NotificationsFragment extends Fragment {
         NotificationListAdapter notification_list_adapter =
                 new NotificationListAdapter(mContext, StaticData.getNotificationList());
         notification_list_recyclerview.setAdapter(notification_list_adapter);
-       /* ChildCartAdapter adapter = new ChildCartAdapter(getActivity(),StaticData.getChildCartList());
-        notification_list_recyclerview.setAdapter(adapter);*/
     }
 }

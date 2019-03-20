@@ -19,7 +19,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.gvtechsolution.fooddeliveryathome.R;
-import com.gvtechsolution.fooddeliveryathome.activities.AccountActivity;
+import com.gvtechsolution.fooddeliveryathome.activities.ProfileActivity;
 import com.gvtechsolution.fooddeliveryathome.activities.SettingsActivity;
 import com.gvtechsolution.fooddeliveryathome.adapter.HomeTabPagerAdapter;
 
@@ -33,6 +33,7 @@ public class HomeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_user);
+        //getSupportActionBar().setTitle("Home Activity");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -73,46 +74,7 @@ public class HomeActivity extends AppCompatActivity
 
             }
         });
-
-//        RecyclerView home_resturant_list = (RecyclerView) findViewById(R.id.home_resturant_list);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-//        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-//        home_resturant_list.setLayoutManager(layoutManager);
-//        String[] languages = {"Resturant1","Resturant2","Resturant3","Resturant4","Resturant5","Resturant6","Resturant6","Resturant6","Resturant6","Resturant6","Resturant6","Resturant6","Resturant6","Resturant6"};
-//        home_resturant_list.setAdapter(new HomeScreenResturantHorizontalListAdapter(languages));
-//
-//        RecyclerView home_food_category_list = (RecyclerView) findViewById(R.id.home_food_category_list);
-//        LinearLayoutManager linearLayoutManagerVertical = new LinearLayoutManager(this);
-//        linearLayoutManagerVertical.setOrientation(LinearLayoutManager.VERTICAL);
-//        home_food_category_list.setLayoutManager(linearLayoutManagerVertical);
-//
-//        String[] foodcategory = {"XII ZODIAC","Roll In Out","Zareen","The Farn","The New Red Chilly","Subway","KFC","6 Bullygunge Place","cat1","cat1","cat1","cat1","cat1","cat1"};
-//        home_food_category_list.setAdapter(new HomeScreenFoodCategoryVerticalListAdapter(getApplicationContext(),foodcategory));
-//        ImageView home_banner = (ImageView)findViewById(R.id.home_screen_banner);
-//        home_banner.setOnClickListener(resturant_list_clickListener);
-//
-//        EditText search_text = findViewById(R.id.home_search_text);
-//        search_text.setOnClickListener(search_list_clickListener);
-
-
-
-    }
-
-
-    /*private View.OnClickListener resturant_list_clickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(HomeActivity.this, FilterByFoodItemActivity.class);
-            startActivity(intent);
-        }
-    };
-    private View.OnClickListener search_list_clickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(HomeActivity.this, SearchListActivity.class);
-            startActivity(intent);
-        }
-    };*/
+   }
 
     @Override
     public void onBackPressed() {
@@ -141,6 +103,7 @@ public class HomeActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_notification) {
             Intent intent = new Intent(getApplicationContext(),SettingsActivity.class);
+            intent.putExtra("notification_fragment","user");
             startActivity(intent);
             return true;
         }
@@ -157,7 +120,8 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_account) {
-            Intent intent = new Intent(getApplicationContext(),AccountActivity.class);
+            Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+            intent.putExtra("account_fragment","user");
             startActivity(intent);
         } else if (id == R.id.nav_cart) {
             Intent intent = new Intent(getApplicationContext(),CartActivity.class);
@@ -165,7 +129,12 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_orderHistory) {
             Intent intent = new Intent(getApplicationContext(),OrderActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_changePassword) {
+        }
+        else if (id == R.id.nav_custom_menu) {
+            Intent intent = new Intent(getApplicationContext(),CustomMenuActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_changePassword) {
             final Dialog change_password_dialog = new Dialog(context);
             change_password_dialog.setContentView(R.layout.change_password);
 

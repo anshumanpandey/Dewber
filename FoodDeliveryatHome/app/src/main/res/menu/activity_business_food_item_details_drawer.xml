@@ -9,17 +9,23 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Item details" />
         <item
-            android:id="@+id/nav_add_profile_picture"
+            android:id="@+id/nav_add_cover_picture"
             android:icon="@drawable/ic_add_profile_pic"
-            android:title="Add Profile Picture " />
+            android:title="Add Cover Picture" />
         <item
-            android:id="@+id/nav_account_details"
+            android:id="@+id/nav_profile_details"
             android:icon="@drawable/nav_account"
-            android:title="Account" />
+            android:title="Profile"/>
         <item
-            android:id="@+id/nav_current_order"
-            android:icon="@drawable/nav_orderhistory"
-            android:title="Current Order" />
+            android:id="@+id/nav_special_menu"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Special Menu"/>
+
+        <item
+            android:id="@+id/nav_working_days"
+            android:icon="@drawable/ic_time"
+            android:title="working Days"/>
+
         <item
             android:id="@+id/nav_business_order_history"
             android:icon="@drawable/nav_orderhistory"

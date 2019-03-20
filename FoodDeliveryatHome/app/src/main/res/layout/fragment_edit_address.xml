@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.user.EditAddressActivity"
-    android:orientation="vertical"
+    tools:context=".fragments.EditAddressFragment"
     android:layout_margin="10dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="10dp">
         <Button
-            android:id="@+id/address_close_button"
+            android:id="@+id/edit_address_close_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/ic_close"/>
+            android:background="@drawable/ic_arrow_back"/>
         <TextView
             android:id="@+id/delivery_details_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/address_close_button"
+            android:layout_below="@+id/edit_address_close_button"
             android:text="@string/delivery_details"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:padding="2dp"
@@ -116,4 +116,4 @@
             android:padding="2dp"
             />
     </RelativeLayout>
-</android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

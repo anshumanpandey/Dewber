@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PaymentCardDetailsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="2.5dp"
+        android:paddingRight="2.5dp"
+        app:layout_constraintTop_toTopOf="parent" >
+    <Button
+        android:id="@+id/close_Card_details"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_arrow_back"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+    <TextView
+        android:id="@+id/textView_add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/close_Card_details"
+        android:text="Add Card details"
+        android:textSize="20dp"
+        android:textColor="@color/colorTextEdit"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:padding="6dp"
+        />
+    <TextView
+        android:id="@+id/textView_add_card_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_add_card"
+        android:text="We accept Credit and Debit Cards from Visa, mastercard,American express"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="6dp"
+        />
+    <EditText
+        android:id="@+id/name_card_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_add_card_desc"
+        android:hint="Name on card"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        />
+    <EditText
+        android:id="@+id/card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_card_details"
+        android:hint="Card number"
+        android:ems="10"
+
+        />
+    <LinearLayout
+        android:id="@+id/layout_below_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_below="@+id/card_number"
+        android:padding="6dp">
+        <EditText
+            android:id="@+id/expiry_date"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:hint="Exp. Date(MM/YY)"
+            android:ems="10"
+
+            />
+        <EditText
+            android:id="@+id/cvv"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:hint="cvv"
+            android:ems="10"
+            />
+    </LinearLayout>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/add_card_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Add Card Details"
+        android:textSize="17dp"
+        android:textColor="@color/colorTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>

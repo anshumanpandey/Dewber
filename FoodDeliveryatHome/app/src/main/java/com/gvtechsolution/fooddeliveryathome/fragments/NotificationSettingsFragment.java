@@ -32,7 +32,7 @@ public class NotificationSettingsFragment extends Fragment {
     private View.OnClickListener close_listner = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            ((SettingsActivity)NotificationSettingsFragment.this.getActivity()).replaceFragment(new NotificationsFragment(),true);
+            ((SettingsActivity)NotificationSettingsFragment.this.getActivity()).getSupportFragmentManager().popBackStack();
         }
     };
 

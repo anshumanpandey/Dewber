@@ -13,9 +13,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.MyAppTheme" parent="AppTheme">
+    <!--<style name="AppTheme.MyAppTheme" parent="AppTheme">
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="windowActionBar">true</item>
+    </style>-->
+    <style name="AppTheme.MyAppTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="windowActionBar">true</item>
     </style>
 
